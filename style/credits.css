@@ -1,0 +1,73 @@
+/*Seleciona o elemento com o respectivo id*/
+#blank-screen {
+    background: url('../img/fatec-wallpaper.jpg') no-repeat; /*Define o background como uma imagem não repetivel em x nem y*/
+    background-size: contain; /*Faz o background ficar contido no tamanho total do elemento pai*/
+    min-height: 400px; /*Define uma altura minima*/
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    position: absolute; /*Define que terá posição absoluta em relação ao pai relativo*/
+    top: 0; /*Define que a distância do canto superior da tela será 0*/
+    right: 0; /*Define que a distância do canto direito da tela será 0*/
+    z-index: 0; /*Altera a ordem de carregamento do elemento, podendo ficar atrás ou na frente de algum elemento que antes não seria possivel*/
+    background-attachment: fixed; /*Faz o background ficar fixo em relação à tela, não irá rolar*/
+}
+
+/*Seleciona o elemento com o respectivo id*/
+#black-screen {
+    background-color: rgba(0, 0, 0, 0.5); /*Muda a cor de fundo*/
+    background-size: cover; /*Faz o background crescer até cobrir o tamanho do elemento*/
+    min-height: 400px; /*Define uma altura minima*/
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    position: absolute; /*Define que terá posição absoluta em relação ao pai relativo*/
+    top: 0; /*Define que a distância do canto superior da tela será 0*/
+    right: 0; /*Define que a distância do canto direito da tela será 0*/
+    z-index: 0; /*Altera a ordem de carregamento do elemento, podendo ficar atrás ou na frente de algum elemento que antes não seria possivel*/
+}
+
+/*Seleciona o elemento com o respectivo id*/
+#t-credit {
+    display: flex; /*Indica o display do elemento como flex, tornando-o flexivel*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Muda a fonte*/
+    font-weight: bold; /*Muda a espessura da fonte*/
+    font-size: 75px; /*Muda o tamanho da fonte*/
+    color: white; /*Muda a cor da fonte*/
+    letter-spacing: 5px; /*Define um espaço entre as letras*/
+    height: 400px; /*Define um tamanho fixo de altura*/
+    align-items: center; /*Centraliza os conteúdos da flex box*/
+    justify-content: center; /*Centraliza o conteúdo da flex box*/
+    user-select: none;  /*Desativa a seleção do cursor sobre o elemento*/
+    width: 100%; /*Define uma largura para o elemento*/
+    position: relative; /*Define a posição do elemento como relativa ao pai*/
+}
+
+/*Seleciona o elemento com o respectivo id*/
+#t-credit-link {
+    position: absolute; /*Define a posição do elemento como absoluta à pagina*/
+    bottom: 0;	/*Define um distanciamento do elemento a parte inferior*/
+    left: 0;   /*Define um distanciamento do elemento à esquerda*/
+    font-size: 12px;   /*Define o tamanho da fonte*/
+    font-family:Arial, Helvetica, sans-serif; /*Define a familia da fonte*/
+    letter-spacing: 0;   /*Define o espeçamento entre as letras*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.credit-box {
+    margin: 20px; /*Cria uma margem em todas as direções por questão estética*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.credit-box h4 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*Muda a fonte do titulo de crédito*/
+    font-size: 1.15em; /*Muda o tamanho da fonte do titulo de crédito*/
+    color: #92bd1e; /*Define a cor do elemento*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.credit-box p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Muda a fonte do parágrafo de crédito*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.credit-button-box {
+    padding-top: 20px; /*Cria um espaço interno superior por questão de espaçamento*/
+    padding-bottom: 25px; /*Cria um espaço interno inferior por questão de espaçamento*/
+}

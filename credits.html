@@ -1,0 +1,167 @@
+<!--Inicia a TAG DOCTYPE, que avisa ao navegador a versão do HTML usada-->
+<!DOCTYPE html>
+<!--Inicia o documento HTML-->
+<html lang="pt-br">
+<!--Informa metadados ao navegador-->
+<head>
+    <!--tag meta de charset que informa ao navegador a tabela de caracteres a ser usada-->
+    <meta charset="UTF-8">
+    <!--Tag meta de http-equiv utilizada para dar suporte a aplicações que só funcionam nas versões mais antigas do IE (Internet Explorer)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Tag meta de viewport para controlar a proporção da página nos mais diversos dispositivos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tag title para informar um título para a página, aparecerá na aba-->
+    <title>PROPAGRI - Créditos</title>
+    <!--Tag de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="style/reset.css">
+    <!--Tag de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="style/utilities.css">
+    <!--Tag de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="style/style.css">
+    <!--Tag de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="style/credits.css">
+</head>
+
+<!--Literalmente o corpo da página, tudo que estiver dentro da tag body irá aparecer na página-->
+<body>
+    <!--DIV usadas como container para o background da FATEC-->
+    <div id="blank-screen"></div>
+	<!--DIV usadas como container para o background da FATEC-->
+    <div id="black-screen"></div>
+    <!--Tag header para cabeçalho/navegação/logotipo-->
+    <header class="d-flex-space-between" id="header">
+        <!--Tag a para a inserção de um hyperlink-->
+        <a href="./index.html"><img id="logo" src="./img/logo_propagri.png" style="height: 40px;" ></a>
+        <!--Tag para criar lista não ordenada (unordered list)-->
+        <ul>
+            <!--Tags li para criar um item na lista seguida de uma tag a para inserir
+                um hyperlink de redirecionamento dentro da mesma página-->
+			<!--Botão para ativar e desativar o modo escuro-->
+            <li id="dark-mode" class="dark-mode" onclick="dark_mode()">
+				<!--label para a estilização do botão-->
+                <label class="switch">
+					<!--Checkbox que irá funcionar visualmente para o botão de ligado e desligado-->
+                    <input type="checkbox" id="checkin" notchecked>
+					<!--Span para conter a imagem do modo escuro-->
+                    <span class="slider round"></span>
+                </label>
+			</li>
+			<!--Redirecionará para inicio-->
+            <li><a href="index.html#inicio" class="nav-link">Início</a></li>
+            <!--Redirecionará para a área de downloads-->
+            <li><a href="index.html#downloads" class="nav-link">Downloads</a></li>
+            <!--Redirecionará para os créditos EPAGRI-->
+            <li><a href="index.html#epagri" class="nav-link">EPAGRI</a></li>
+            <!--Redirecionará para os créditos FEPESE-->
+            <li><a href="index.html#fepese" class="nav-link">FEPESE</a></li>
+            <!--Redirecionará para as informações sobre a PMI-->
+            <li><a href="index.html#pmi" class="nav-link">Sobre</a></li>
+            <!--Redirecionará para os créditos-->
+            <li><a href="#" class="nav-link">Créditos</a></li>
+        </ul>
+    </header>
+
+    <!--Tag article utilizada semânticamente para conter o conteúdo principal ou as informações da página-->
+    <article class="d-flex-center flex-column">
+        <!--Tag section para conter o espaço vazio inicial dos créditos-->
+        <section id="t-credit">
+			<!--Tag p para parágrafo-->
+            <p>Créditos</p>
+			<!--Tag p para parágrafo; Tag small para diminuir a fonte; Tag a para referência de hyperlink-->
+            <p id="t-credit-link"><small>Fonte da imagem: <a href="https://guiadecarapicuiba.com.br/empresas/fatec-carapicuiba/">guiadecarapicuiba.com.br/</a></small></p>
+        </section>
+
+        <!--Tag section usada para criar os respectivos créditos-->
+        <section class="credit-box d-flex-center flex-column">
+            <!--Tag h4 para titulo do crédito-->
+            <h4>FEPESE e EPAGRI</h4>
+            <!--Tags p usadas para criar um parágrafo nos créditos-->
+            <p>A prova original em PDF foi retirado do site da Fundação de Estudos e Pesquisas Socioeconômicos (FEPESE).</p>
+			<!--Tag p para parágrafo-->
+            <p>Todos os direitos reservados à FEPESE (Fundação de Estudos e Pesquisas Socioeconômicos) e à EPAGRI (Empresa de Pesquisa</p> 
+			<!--Tag p para parágrafo-->
+            <p>Agropecuária e Extensão Rural de Santa Catarina).</p>
+        </section>
+
+        <!--Tag section usada para criar os respectivos créditos-->
+        <section class="credit-box d-flex-center flex-column">
+            <!--Tag h4 para titulo do crédito-->
+            <h4>FATEC Carapicuíba</h4>
+            <!--Tags p usadas para criar um parágrafo nos créditos-->
+            <p>Projeto desenvolvido por alunos do curso de Análise e Desenvolvimento de Sistemas da FATEC Carapicuíba.</p>
+        </section>
+
+        <!--Tag section usada para criar os respectivos créditos-->
+        <section class="credit-box d-flex-center flex-column">
+            <!--Tag h4 para titulo do crédito-->
+            <h4>Orientadora</h4>
+            <!--Tags p usadas para criar um parágrafo nos créditos-->
+            <p>Msc. FELIX, Rita</p>
+        </section>
+
+        <!--Tag section usada para criar os respectivos créditos-->
+        <section class="credit-box d-flex-center flex-column">
+            <!--Tag h4 para titulo do crédito-->
+            <h4>Co-orientador</h4>
+            <!--Tags p usadas para criar um parágrafo nos créditos-->
+            <p>Msc. Lobianco, José Luís Barboza</p>
+        </section>
+
+        <!--Tag section usada para criar os respectivos créditos-->
+<!--        <section class="credit-box d-flex-center flex-column"> -->
+            <!--Tag h4 para titulo do crédito-->
+<!--        <h4>Revisor(a)</h4> -->
+            <!--Tags p usadas para criar um parágrafo nos créditos-->
+<!--        <p>-------</p> -->
+<!--    </section> -->
+
+        <!--Tag section usada para criar os respectivos créditos-->
+        <section class="credit-box d-flex-center flex-column">
+            <!--Tag h4 para titulo do crédito-->
+            <h4>Autores do PROPAGRI</h4>
+            <!--Tags p usadas para criar um parágrafo nos créditos-->
+            <p>Pereira, Alexandre</p>
+			<!--Tag p para parágrafo-->
+            <p>Lucas, Gustavo</p>
+			<!--Tag p para parágrafo-->
+            <p>Ferrareis, Leandro</p>
+			<!--Tag p para parágrafo-->
+            <p>Anastácio, Matheus</p>
+			<!--Tag p para parágrafo-->
+            <p>Anacleto, Rodrigo</p>
+        </section>  
+
+        <!--Tag section para criar um espaço para os botões de crédito-->
+        <section class="credit-button-box">
+            <!--Tag div para conter os links de redirecionamento-->
+            <div class="d-flex-center">
+                <!--Tag a para conter um hyperlink que irá redirecionar o usuário para a área de inicio-->
+                <a href="index.html" class="btn btn-white" id="btn-gab-in">Início</a>
+            </div>
+        </section>
+    </article>
+
+    <!--Tag footer para criar o rodapé da página-->
+    <footer  class="d-flex-center flex-column article-shadow c-white" id="footer-spc">
+        <!--Tag div para conter as informações do rodapé, como logotipo e a descrição do site-->
+        <div class="d-flex-space-between mb-20 pb-20 w-100" id="footer-field">
+            <!--Tag div para conter as logotipos de crédito-->
+            <div id="footer-credit" class="w-center">
+                <!--Tag a para redirecionamento à pagina da FATEC Carapicuíba seguida de uma tag img para inserir sua logotipo-->
+                <a href="http://www.fateccarapicuiba.edu.br/"><img src="./img/logo_fatec.png" height="60px"></a>
+                <!--Tag a para redirecionamento à pagina da FATEC Carapicuíba de Análise e Desenvolvimento de Sistemas
+                    e uma tag img para inserir sua logotipo-->
+                <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"><img src="./img/logo_ads.png" height="60px"></a>
+                <!--Tag a para redirecionamento à pagina do Centro Paula Souza seguida de uma tag img para inserir sua logotipo-->
+                <a href="https://www.cps.sp.gov.br/"><img src="./img/logo_cps.png" height="60px"></a>
+            </div>
+        </div>
+
+        <!--Declaração de direitos de site-->
+        <p>© Direitos do website reservados.</p>
+    </footer>
+
+    <!--Tag script para inserir ou importar scripts-->
+    <script src="script/credits.js"></script>
+</body>
+</html>

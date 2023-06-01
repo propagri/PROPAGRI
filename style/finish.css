@@ -1,0 +1,328 @@
+/*Seleciona a tag semantica article*/
+article {
+    padding-top: 90px; /*Cria um espaçamento interno*/
+}
+
+/*Seleciona o header*/
+#header {
+    z-index: 1000;	/*Define a ordem de carregamento do estilo, fazendo com que o header fique sempre na frente*/
+}
+
+/*Seleciona a tag de titulo h2*/
+h2 {
+    text-align: center;     /*Alinha o texto de acordo com o centro de sua largura*/
+    color: #92bd1e; /*muda a cor da fonte*/
+}
+
+/*Seleciona a tag semantica section*/
+section {
+    min-width: 300px; /*Define que terá largura de 300px do tamanho do pai*/
+    margin-bottom: 10px;
+}
+
+/*Seleciona a tag table*/
+table {
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    border-spacing: 0; /*Remove os espaços entre os quadrados das tabelas*/
+    border-collapse: collapse; /*Colapsa os quadrados das tabelas, unificando suas bordas*/
+    box-shadow: 0px 0px 5px black; /*Define uma sombra para a tabela*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.table{
+    margin-top: 15px; /*Cria uma margem superior*/
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    text-align: center;     /*Alinha o texto de acordo com o centro de sua largura*/
+    border-radius: 25px; /*Arredonda as bordas*/
+    border: solid #ddd 1px; /*Cria uma borda*/
+    overflow:hidden; /*Elimina o excesso de tamanho do elemento*/
+}
+
+/*Seleciona as tags td dentro de table*/
+table td{
+    color: black; /*Muda a cor da fonte*/
+    background-color: white; /*Muda a cor de fundo*/
+    padding: 5px; /*Define um espaçamento interno*/
+    border: 1px solid #ddd;  /*Cria uma borda*/
+    text-align: center;     /*Alinha o texto de acordo com o centro de sua largura*/
+    border: 1px solid rgba(0, 0, 0, 0.5); /*Cria uma borda*/
+}
+
+/*Seleciona as tags th dentro de table*/
+table th{
+    color: white; /*Muda a cor da fonte*/
+    background-color: #92bd1e; /*Muda a cor de fundo*/
+    font-weight: normal; /*Muda a espessura da fonte*/
+    text-align: center;     /*Alinha o texto de acordo com o centro de sua largura*/
+    padding: 5px; /*Cria um espaçamento interno*/
+    border: 1px solid rgba(0, 0, 0, 0.5); /*Cria uma borda*/
+
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.correct {
+    background-color: rgba(0, 220, 0, 0.8); /*Muda a cor de fundo*/
+    color: white; /*Muda a cor da fonte*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.wrong {
+    background-color: rgba(220, 0, 0, 0.8); /*Muda a cor de fundo*/
+    color: white; /*Muda a cor da fonte*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#acertos {
+    margin-top: 15px; /*Cria um espaçamento superior externo*/
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    padding: 10px; /*Cria um espaçamento interno*/
+    border-radius: 25px; /*Arredonda as bordas*/
+    border: solid #ddd 1px; /*Cria bordas*/
+    box-shadow: 0px 0px 5px black; /*Cria uma sombra no elemento*/
+    background-color: white; /*Muda a cor de fundo*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.progress-box {
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    margin-bottom: 20px; /*Cria um espaçamento externo*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.progress {
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    position: relative; /*Deixa a posição relativa a si mesmo*/
+    background-color: rgb(228, 228, 228); /*Muda a cor de fundo*/
+    border: 1px solid rgb(180, 180, 180); /*Cria uma borda*/
+    border-radius: 20px;   /*Arredonda as bordas*/
+    text-align: center;       /*Alinha o texto de acordo com o centro de sua largura*/
+    overflow: hidden; /*'Esconde' o excesso do tamanho*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.progress-dark {
+    width: 100%; /*Define que terá largura de 100% do tamanho do pai*/
+    position: relative; /*Deixa a posição relativa a si mesmo*/
+    background-color: rgb(150, 150, 150); /*Muda a cor de fundo*/
+    border: 1px solid rgb(120, 120, 120); /*Cria uma borda*/
+    border-radius: 20px;   /*Arredonda as bordas*/
+    text-align: center;       /*Alinha o texto de acordo com o centro de sua largura*/
+    overflow: hidden; /*'Esconde' o excesso do tamanho*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.progress-blue {
+    position: absolute; /*Define que terá posição absoluta em relação ao pai relativo*/
+    left: 0; /*Define uma distancia de 0 da esquerda do pai relativo*/
+    height: 100%; /*Define uma altura de 100% em relação ao pai*/
+    background-color: rgb(124, 124, 255); /*Muda a cor de fundo*/
+    z-index: 1;/*Altera a ordem de carregamento do elemento, podendo ficar atrás ou na frente de algum elemento que antes não seria possivel*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.progress-green {
+    position: absolute; /*Define que terá posição absoluta em relação ao pai relativo*/
+    left: 0; /*Define uma distancia de 0 da esquerda do pai relativo*/
+    height: 100%; /*Define uma altura de 100% em relação ao pai*/
+    background-color: rgba(0, 220, 0, 0.8); /*Muda a cor de fundo*/
+    z-index: 1;/*Altera a ordem de carregamento do elemento, podendo ficar atrás ou na frente de algum elemento que antes não seria possivel*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.progress-red {
+    position: absolute; /*Define que terá posição absoluta em relação ao pai relativo*/
+    left: 0; /*Define uma distancia de 0 da esquerda do pai relativo*/
+    height: 100%; /*Define uma altura de 100% em relação ao pai*/
+    background-color: rgba(220, 0, 0, 0.8); /*Muda a cor de fundo*/
+    z-index: 1;/*Altera a ordem de carregamento do elemento, podendo ficar atrás ou na frente de algum elemento que antes não seria possivel*/
+}
+
+/* Seleciona todos os elementos com a respectiva classe */
+.progress-text {
+    position: relative; /* Define a posição relativa a si mesmo */
+    z-index: 2; /* Altera a ordem de carregamento do elemento, podendo ficar atrás ou na frente de algum elemento que antes não seria possível */
+}
+
+/* Seleciona os botões */
+button {
+    font-size: 16px; /* Muda o tamanho da fonte */
+}
+
+/* Seleciona todos os hyperlinks dentro de section */
+section a {
+    margin: 10px; /* Cria um espaçamento externo */
+}
+
+/* Seleciona a lista com o respectivo id */
+#tab-row {
+    display: flex; /* Define o elemento como flexível */
+    flex-direction: row; /* Define a direção dos elementos filhos como horizontal */
+    z-index: 100; /* Altera a ordem de empilhamento, tornando o elemento mais "elevado" */
+    padding-bottom: 20px; /* Adiciona espaço inferior */
+}
+
+/* Seleciona a tag li dentro da lista com o respectivo id */
+#tab-row li {
+    padding: 10px 7px; /* Adiciona espaçamento interno nas direções superior e inferior, e espaçamento interno nas direções esquerda e direita */
+    user-select: none; /* Impede que o texto seja selecionado pelo usuário */
+    cursor: pointer; /* Mostra um cursor em formato de mão quando o mouse estiver sobre o elemento */
+    margin: 0px 5px; /* Adiciona espaçamento externo nas direções esquerda e direita */
+    border-radius: 10px; /* Adiciona cantos arredondados ao elemento */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.tab-unselected {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Define uma borda sólida com uma cor em RGBA */
+    background-color: rgba(0, 0, 0, 0.0); /* Define uma cor de fundo em RGBA com transparência total */
+    font-size: 20px; /* Define o tamanho da fonte */
+    color: rgba(0, 0, 0, 0.5); /* Define a cor do texto em RGBA */
+}
+
+/* Seleciona o elemento com a respectiva classe quando ocorre o hover (passar o mouse por cima) */
+.tab-unselected:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Define uma borda sólida com uma cor em RGBA quando ocorre o hover */
+    background-color: rgba(0, 0, 0, 0.1); /* Define uma cor de fundo em RGBA com uma transparência parcial quando ocorre o hover */
+    transition: 400ms; /* Adiciona uma transição de 400ms para suavizar a mudança */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.tab-selected {
+    border: 1px solid rgba(62, 150, 43, 0.15); /* Define uma borda sólida com uma cor em RGBA */
+    border-radius: 10px 10px 0px 0px; /* Define um raio de borda específico para os cantos superiores esquerdo e direito */
+    background-color: rgb(200, 222, 195); /* Define uma cor de fundo em RGB */
+    font-size: 20px; /* Define o tamanho da fonte */
+    color: rgba(0, 0, 0, 0.75); /* Define a cor do texto em RGBA */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.tab-unselected-dark {
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Define uma borda sólida com uma cor em RGBA */
+    background-color: rgba(255, 255, 255, 0.075); /* Define uma cor de fundo em RGBA com uma transparência parcial */
+    font-size: 20px; /* Define o tamanho da fonte */
+    color: rgba(255, 255, 255, 0.5); /* Define a cor do texto em RGBA */
+}
+
+/* Seleciona o elemento com a respectiva classe quando ocorre o hover (passar o mouse por cima) */
+.tab-unselected-dark:hover {
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Define uma borda sólida com uma cor em RGBA quando ocorre o hover */
+    background-color: rgba(255, 255, 255, 0.4); /* Define uma cor de fundo em RGBA com uma transparência parcial quando ocorre o hover */
+    color: rgba(255, 255, 255, 0.75); /* Define a cor do texto em RGBA quando ocorre o hover */
+    transition: 400ms; /* Adiciona uma transição de 400ms para suavizar a mudança */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.tab-selected-dark {
+	border: 1px solid rgba(68, 31, 127, 0.5); /* Define uma borda sólida com uma cor em RGBA */
+	border-radius: 10px 10px 0px 0px; /* Define um raio de borda específico para os cantos superiores esquerdo e direito */
+	background-color: rgba(68, 31, 127, 0.8); /* Define uma cor de fundo em RGBA com uma transparência parcial */
+	font-size: 20px; /* Define o tamanho da fonte */
+	color: white; /* Define a cor do texto como branco */
+}
+
+
+/* Seleciona o elemento com a respectiva id */
+#tab {
+    border: 1px solid rgba(62, 150, 43, 0.15); /* Define uma borda com cor e transparência */
+    padding: 20px 0px; /* Define espaçamento interno de 20px na parte superior e inferior e 0px nas laterais */
+    border-radius: 10px 10px 10px 10px; /* Define borda arredondada com 10px de raio nos cantos */
+    box-shadow: 0px 0px 5px black; /* Define uma sombra com deslocamento horizontal e vertical de 0px e desfoque de 5px, com cor preta */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.title-category {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a família de fontes */
+    font-size: 30px; /* Define o tamanho da fonte como 30px */
+    color: rgba(0, 0, 0, 0.5); /* Define a cor do texto como preto com 50% de opacidade */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.principal-title-category {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a família de fontes */
+    font-size: 30px; /* Define o tamanho da fonte como 30px */
+    color: rgba(0, 0, 0, 0.8); /* Define a cor do texto como preto com 80% de opacidade */
+    width: 90%; /* Define a largura do elemento como 90% */
+    text-align: center; /* Centraliza o texto */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5); /* Define uma borda inferior com cor e transparência */
+    padding-bottom: 5px; /* Define espaçamento interno de 5px na parte inferior */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.time {
+    color: rgba(0, 0, 0, 0.5); /* Define a cor do texto como preto com 50% de opacidade */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.question-box-item {
+    padding: 5px; /* Define espaçamento interno de 5px em todas as direções */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Define uma borda com cor e transparência */
+    cursor: pointer; /* Altera o cursor do mouse para um ponteiro ao passar por cima do elemento */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.border-completely {
+    border-radius: 5px; /* Define borda arredondada com 5px de raio em todos os cantos */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.border-left {
+    border-radius: 5px 0px 0px 5px; /* Define uma borda arredondada com 5px de raio apenas nos cantos superiores esquerdo e inferior esquerdo */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.border-right {
+    border-radius: 0px 5px 5px 0px; /* Define uma borda arredondada com 5px de raio apenas nos cantos superiores direito e inferior direito */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.graphic-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a família de fontes */
+    font-size: 30px; /* Define o tamanho da fonte como 30px */
+    color: rgba(0, 0, 0, 0.5); /* Define a cor do texto como preto com 50% de opacidade */
+    width: 90%; /* Define a largura do elemento como 90% */
+    text-align: center; /* Centraliza o texto */
+    padding-bottom: 5px; /* Define espaçamento interno de 5px na parte inferior */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.statistic-button {
+    background-color: #92bd1e; /* Define a cor de fundo como um verde */
+    color: white; /* Define a cor do texto como branco */
+    font-size: 35px; /* Define o tamanho da fonte como 35px */
+    padding: 10px 20px; /* Define espaçamento interno de 10px na parte superior e inferior e 20px nas laterais */
+    border-radius: 100%; /* Define uma borda arredondada com 100% de raio, tornando o elemento circular */
+    cursor: pointer; /* Altera o cursor do mouse para um ponteiro ao passar por cima do elemento */
+    user-select: none; /* Impede a seleção de texto no elemento */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.statistic-button:active {
+    background-color: #7ea319; /* Define a cor de fundo como um verde mais escuro ao clicar no elemento */
+    color: white; /* Define a cor do texto como branco */
+    font-size: 35px; /* Define o tamanho da fonte como 35px */
+    padding: 10px 20px; /* Define espaçamento interno de 10px na parte superior e inferior e 20px nas laterais */
+    border-radius: 100%; /* Define uma borda arredondada com 100% de raio, tornando o elemento circular */
+    cursor: pointer; /* Altera o cursor do mouse para um ponteiro ao passar por cima do elemento */
+    user-select: none; /* Impede a seleção de texto no elemento */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.statistic-button-dark {
+    background-color: rgb(78, 36, 145); /* Define a cor de fundo como uma cor roxa */
+    color: white; /* Define a cor do texto como branco */
+    font-size: 35px; /* Define o tamanho da fonte como 35px */
+    padding: 10px 20px; /* Define espaçamento interno de 10px na parte superior e inferior e 20px nas laterais */
+    border-radius: 100%; /* Define uma borda arredondada com 100% de raio, tornando o elemento circular */
+    cursor: pointer; /* Altera o cursor do mouse para um ponteiro ao passar por cima do elemento */
+    user-select: none; /* Impede a seleção de texto no elemento */
+}
+
+/* Seleciona o elemento com a respectiva classe */
+.statistic-button-dark:active {
+    background-color: rgb(82, 36, 155); /* Define a cor de fundo como uma cor roxa mais escura ao clicar no elemento */
+    color: white; /* Define a cor do texto como branco */
+    font-size: 35px; /* Define o tamanho da fonte como 35px */
+    padding: 10px 20px; /* Define espaçamento interno de 10px na parte superior e inferior e 20px nas laterais */
+    border-radius: 100%; /* Define uma borda arredondada com 100% de raio, tornando o elemento circular */
+    cursor: pointer; /* Altera o cursor do mouse para um ponteiro ao passar por cima do elemento */
+    user-select: none; /* Impede a seleção de texto no elemento */
+}

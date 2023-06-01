@@ -1,0 +1,454 @@
+/*Seleciona todos os elementos da página*/
+* {
+    margin: 0;  /*Define a margem como 0*/
+    padding: 0; /*Define o padding como 0*/
+    list-style-type: none;  /*Reseta os tipos das listas*/
+    text-decoration: none;  /*Reseta decorações de texto*/
+}
+
+/*Seleciona a tag header*/
+header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Muda a fonte de todos os elementos dentro da tag header*/
+    font-size: 40px; /*Muda o tamanho dos textos dentro da tag header*/
+    color: rgba(0, 0, 0, 0.5); /*Muda a cor da fonte*/
+    font-weight: 200; /*Muda a expessura dos textos*/
+    margin-bottom: 20px; /*Cria uma margem inferior*/
+    cursor: default; /*Deixa o cursor como o padrão on hover*/
+    user-select: none; /*Bloqueia a seleção on hover*/
+    display: flex; /*Deixa o elemento flexivel*/
+    align-items: center; /*Alinha os itens no centro*/
+    justify-content: center; /*Alinha os itens no centro*/
+    flex-direction: column; /*Muda a direção da flex para colunas (vertical)*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#category {
+    font-size: 0.7em; /*Muda o tamanho da fonte*/
+    text-align: center; /*Alinha o texto para o centro*/
+}
+
+/*Seleciona a tag body*/
+body {
+    font-family: Arial, Helvetica, sans-serif; /*Muda o tipo da fonte*/
+    display: flex; /*Deixa os elementos flexiveis*/
+    align-items: center; /*Centraliza os elementos*/
+    justify-content: center; /*Centraliza os elementos*/
+    flex-direction: column; /*Coloca os elementos verticalmente*/
+    margin: 15px; /*Define um espaçamento externo*/
+    background-color: #BADB57; /*Define a cor de fundo*/
+}
+
+/*Seleciona a tag article*/
+article {
+    width: 50%; /*Define a largura em relação ao pai*/
+    border-radius: 10px; /*Define um arredondamento de borda*/
+    border: 1px rgba(0, 0, 0, 0.1) solid; /*Define a cor, espessura e tipo da borda*/
+    padding: 10px 10px; /*Define o espaçamento interno do elemento*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /*Define as distâncias, cor e tamanho da sombra que será criada no elemento*/
+    background-color: white; /*Define a cor do fundo*/
+}
+
+/*Seleciona o segundo filho da tag section dentro de uma tag article*/
+article section:nth-child(1){
+    margin-top: 10px; /*Cria uma margem superior no elemento*/
+    padding-bottom: 10px; /*Cria um espaçamento interno inferior no elemento*/
+}
+
+/*Seleciona o primeiro bold dentro do segundo filho da tag section dentro da tag article*/
+article section:nth-child(1) b {
+    padding-right: 10px; /*Cria um espaçamento interno à direita do elemento*/
+}
+
+/*Seleciona as imagens dentro da classe question*/
+.question img {
+    width: 100%; /*A largura do elemento se torna x do pai*/
+}
+
+/*Seleciona todas as tags section*/
+section {
+    margin-bottom: 10px; /*Cria um espaçamento externo inferior*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.alternative {
+    width: 100%; /*A largura do elemento se torna x do pai*/
+    margin: 5px 0; /*Cria espaçamentos externos*/
+    border: 1px solid rgba(0, 0, 0, 0.5); /*Define a cor, espessura e tipo da borda*/
+    background-color: white; /*Define uma cor de fundo*/
+    border-radius: 10px; /*Define um arredondamento de borda*/
+    display: flex; /*Deixa o elemento flexivel*/
+    align-items: center; /*Alinha os itens no centro*/
+    justify-content: start; /*Alinha os itens no começo*/
+    padding: 10px; /*Cria espaçamentos internos*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe, executado apenas na interação do mouse*/
+.pending:hover {
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    background-color: rgba(0, 0, 0, 0.075); /*Define uma cor de fundo*/
+    cursor: pointer; /*Muda o tipo do cursor para o ponteiro ao passar por cima*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.selected {
+    transition: 200ms; /*Define um tempo de transição de animação*/
+    background-color: rgba(0, 0, 0, 0.1); /*Define uma cor de fundo*/
+    border: 1px solid black; /*Define a cor, espessura e tipo da borda*/
+    color: rgba(0, 0, 0, 0.75); /*Muda a cor da fonte*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.correct {
+    border-color: rgba(0, 50, 0, 0.75); /*Define uma cor de borda*/
+    background-color: rgba(0, 255, 0, 0.2); /*Define uma cor de fundo*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.wrong {
+    border-color: rgba(50, 0, 0, 0.5); /*Define uma cor de borda*/
+    background-color: rgba(255, 0, 0, 0.2);  /*Define uma cor de fundo*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe dentro de outra respectiva classe*/
+.selected .letter {
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    background-color: black;  /*Define uma cor de fundo*/
+    border: 2px solid rgba(0, 0, 0, 0.25); /*Define a cor, espessura e tipo da borda*/
+    border-radius: 100%; /*Define um arredondamento de borda*/
+    color: white; /*Muda a cor da fonte*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe dentro do button*/
+button .letter {
+    border: 2px solid rgba(0, 0, 0, 0); /*Define a cor, espessura e tipo da borda*/
+    border-radius: 100%; /*Define um arredondamento de borda*/
+    font-weight: bold; /*Muda a expessura dos textos*/
+    font-size: 1.1em; /*Muda o tamanho da fonte*/
+    margin-right: 8px; /*Cria espaçamentos externos*/
+    padding: 2px 5px; /*Cria espaçamentos internos*/
+}
+
+header ul {
+    text-decoration: none; /*Remove as decorações de texto*/
+    text-align: center; /*Alinha o texto para o centro*/
+}
+
+header  li {
+    display: inline-block; /*Dá propriedades inline e block ao elemento*/
+    width: 40px; /*Define a largura do elemento*/
+}
+
+header a {
+    font-size: 20px; /*Muda o tamanho da fonte*/
+    font-weight: bold; /*Muda a expessura dos textos*/
+    color: rgba(0, 0, 0, 0.7); /*Muda a cor da fonte*/
+    border-radius: 100%; /*Define um arredondamento de borda*/
+    padding: 5px 0px; /*Cria espaçamentos internos*/
+}
+
+/*Seleciona o único elemento com o respectivo id dentro do header*/
+header #active {
+    background-color: #617C15; /*Define uma cor de fundo*/
+    color: rgba(255, 255, 255, 1); /*Muda a cor da fonte*/
+    
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#buttons {
+    display: flex; /*Deixa o elemento flexivel*/
+    align-items: center; /*Alinha os itens no centro*/
+    justify-content: space-between; /*Alinha os itens com espaços equivalentes entre*/
+    margin-top: 0px; /*Cria espaçamentos externos*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.btn-finish{
+    color: rgba(0, 0, 0, 0.9); /*Muda a cor da fonte*/
+    border: 0px; /*Define a cor, espessura e tipo da borda*/
+    background-color: white; /*Define uma cor de fundo*/
+    font-size: 16px; /*Muda o tamanho da fonte*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.btn-finish:hover{
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    cursor: pointer; /*Muda o tipo do cursor para o ponteiro ao passar por cima*/
+    color: rgba(0, 0, 0, 1); /*Muda a cor da fonte*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.btn {
+    border: 0; /*Define a cor, espessura e tipo da borda*/
+    border-radius: 10px; /*Define um arredondamento de borda*/
+    font-size: 1.1em; /*Muda o tamanho da fonte*/
+    text-align: center; /*Alinha o texto para o centro*/
+    padding: 10px 20px; /*Cria espaçamentos internos*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.outline {
+    border: 1px black solid; /*Define a cor, espessura e tipo da borda*/
+    background-color: white; /*Define uma cor de fundo*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.outline:hover {
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    background-color: black; /*Define uma cor de fundo*/
+    color: white; /*Muda a cor da fonte*/
+    cursor: pointer; /*Muda o tipo do cursor para o ponteiro ao passar por cima*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.bg-black {
+    transition: 200ms; /*Define um tempo de transição de animação*/
+    background-color: black; /*Define uma cor de fundo*/
+    color: white; /*Muda a cor da fonte*/
+    border: 1px solid white; /*Define a cor, espessura e tipo da borda*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.bg-black-static {
+    transition: 200ms; /*Define um tempo de transição de animação*/
+    background-color: black; /*Define uma cor de fundo*/
+    color: white; /*Muda a cor da fonte*/
+    border: 1px solid white; /*Define a cor, espessura e tipo da borda*/
+    cursor: pointer; /*Muda o tipo do cursor para o ponteiro ao passar por cima*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.bg-black:hover {
+    transition: 200ms; /*Define um tempo de transição de animação*/
+    background-color: white; /*Define uma cor de fundo*/
+    color: black; /*Muda a cor da fonte*/
+    border: 1px black solid; /*Define a cor, espessura e tipo da borda*/
+    cursor: pointer; /*Muda o tipo do cursor para o ponteiro ao passar por cima*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.disabled {
+    cursor: default; /*Muda o tipo do cursor para o padrão ao passar por cima*/
+    color: rgba(0, 0, 0, 0.5); /*Muda a cor da fonte*/
+    border: 1px solid rgba(0, 0, 0, 0) /*Define a cor, espessura e tipo da borda*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.c-black {
+    color: black; /*Muda a cor da fonte*/
+}
+
+img {
+    margin-bottom: 10px; /*Cria espaçamentos externos*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.question {
+    padding-bottom: 10px; /*Cria espaçamentos internos*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#source {
+    text-align: center; /*Alinha o texto para o centro*/
+    color: rgba(0, 0, 0, .75); /*Muda a cor da fonte*/
+}
+
+#source a {
+    color: rgba(0, 0, 0, .5); /*Muda a cor da fonte*/
+}
+
+#definitive {
+    opacity: 100%;
+    margin: 0; /*Cria espaçamentos externos*/
+    padding-top: 5px; /*Cria espaçamentos internos*/
+    user-select: none; /*Desativa a seleção*/
+    cursor: default; /*Muda o tipo do cursor para o padrão ao passar por cima*/
+}
+
+.definitive-correct {
+    color: green; /*Muda a cor da fonte*/
+}
+
+.definitive-wrong {
+    color: red; /*Muda a cor da fonte*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.show {
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    opacity: 1; /*Muda a opacidade do elemento*/
+    visibility: visible; /*Muda a visibilidade do elemento*/
+}
+
+/*Seleciona todos os elementos com a respectiva classe*/
+.hide {
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    opacity: 0; /*Muda a opacidade do elemento*/
+    visibility: hidden; /*Muda a visibilidade do elemento*/
+	display: none; /*Muda a visualização do elemento para none*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#popup-window {
+    width: 100%; /*Define uma largura de acordo com o pai*/
+    height: 100%; /*Define uma altura de acordo com o pai*/
+    position: fixed; /*A posição se torna fixa em relação à tela*/
+    top: 0; /*Torna a distancia do top o valor especificado*/
+    background-color: rgba(0, 0, 0, 0.5); /*Define uma cor de fundo*/
+    display: flex; /*Deixa o elemento flexivel*/
+    align-items: center; /*Alinha os itens no centro*/
+    justify-content: center; /*Alinha os itens no centro*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#popup-screen {
+    width: 30%; /*Define uma largura de acordo com o pai*/
+    border-radius: 15px; /*Define um arredondamento de borda*/
+    background-color: white;  /*Define uma cor de fundo*/
+    border: 1px solid rgba(0, 0, 0, 0.5); /*Define a cor, espessura e tipo da borda*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /*Define as distâncias, cor e tamanho da sombra que será criada no elemento*/
+    position: relative; /*A posição se torna relativa em relação a si mesma*/
+    display: flex; /*Deixa o elemento flexivel*/
+    align-items: center; /*Alinha os itens no centro*/
+    flex-direction: column; /*Muda o fluxo para vertical da flexbox*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#answer-title {
+    border-width: 0 0 1px 0; /*Muda a espessura das bordas*/
+    border-style: solid; /*Muda o tipo da borda*/
+    border-color: rgba(0 , 0, 0, 0.3); /*Define uma cor de borda*/
+    border-radius: 10px 10px 0px 0px; /*Muda o arredondamento das bordas*/
+    opacity: 75%; /*Muda a opacidade do elemento*/
+    width: 100%; /*Muda a largura de acordo com o pai*/
+    padding: 10px 0; /*Cria espaçamentos internos*/
+    text-align: center; /*Alinha o texto para o centro*/
+    margin-bottom: 10px; /*Cria espaçamentos externos*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#answer-content {
+    text-align: center; /*Alinha o texto para o centro*/
+    padding-bottom: 20px; /*Define um espaçamento interno inferior*/
+    padding-left: 10px; /*Define um espaçamento interno à esquerda*/
+    padding-right: 10px; /*Define um espaçamento interno à direita*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#popup-screen img {
+    height: 20px; /*Define uma altura*/
+}
+
+/*Seleciona botões do único elemento com o respectivo id*/
+#popup-screen button {
+    position: absolute; /*A posição se torna absoluta em relação ao pai relativo*/
+    right: 15px; /*Define que a distância da direita do relative será apenas de 12px*/
+    top: 12px; /*Define que a distância superior do relative será apenas de 12px*/
+    border-width: 0; /*Define a espessura da borda como 0*/
+    cursor: pointer; /*Muda o tipo do cursor para o ponteiro ao passar por cima*/
+    font-size: 1.2em; /*Muda o tamanho da fonte*/
+    background-color: white; /*Define uma cor de fundo*/
+}
+
+/*Seleciona botões on hover do único elemento com o respectivo id*/
+#popup-screen button:hover {
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    color: white; /*Muda a cor da fonte*/
+}
+
+/*Seleciona o terceiro filho de span dentro da classe altenative*/
+.alternative span:nth-child(2) {
+    width: 100%; /*Muda o tamanho para 100% do pai*/
+}
+
+/*Seleciona o único elemento com a respectiva classe*/
+#logo {
+    position: absolute; /*Deixa a posição absoluta em relação ao pai*/
+    left: 15px; /*Torna a distância à esquerda o valor especificado*/
+    top: 20px; /*Torna a distância superior o valor especificado*/
+}
+
+.invisible {
+    display: none;
+}
+
+
+/*Seleciona o único elemento com o respectivo id*/
+#statistic-window {
+    width: 100%; /*Define uma largura de acordo com o pai*/
+    height: 100%; /*Define uma altura de acordo com o pai*/
+    position: fixed; /*A posição se torna fixa em relação à tela*/
+    top: 0; /*Torna a distancia do top o valor especificado*/
+    background-color: rgba(0, 0, 0, 0.5); /*Define uma cor de fundo*/
+    display: flex; /*Deixa o elemento flexivel*/
+    align-items: center; /*Alinha os itens no centro*/
+    justify-content: center; /*Alinha os itens no centro*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#statistic-screen {
+    width: 60%; /*Define uma largura de acordo com o pai*/
+    border-radius: 15px; /*Define um arredondamento de borda*/
+    background-color: white;  /*Define uma cor de fundo*/
+    border: 1px solid rgba(0, 0, 0, 0.5); /*Define a cor, espessura e tipo da borda*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /*Define as distâncias, cor e tamanho da sombra que será criada no elemento*/
+    position: relative; /*A posição se torna relativa em relação a si mesma*/
+    display: flex; /*Deixa o elemento flexivel*/
+    align-items: center; /*Alinha os itens no centro*/
+    flex-direction: column; /*Muda o fluxo para vertical da flexbox*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#statistic-title {
+    border-width: 0 0 1px 0; /*Muda a espessura das bordas*/
+    border-style: solid; /*Muda o tipo da borda*/
+    border-color: rgba(0 , 0, 0, 0.3); /*Define uma cor de borda*/
+    border-radius: 10px 10px 0px 0px; /*Muda o arredondamento das bordas*/
+    opacity: 75%; /*Muda a opacidade do elemento*/
+    width: 100%; /*Muda a largura de acordo com o pai*/
+    padding: 10px 0; /*Cria espaçamentos internos*/
+    text-align: center; /*Alinha o texto para o centro*/
+    margin-bottom: 10px; /*Cria espaçamentos externos*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#statistic-content {
+    text-align: center; /*Alinha o texto para o centro*/
+    padding-bottom: 20px; /*Define um espaçamento interno inferior*/
+    padding-left: 10px; /*Define um espaçamento interno à esquerda*/
+    padding-right: 10px; /*Define um espaçamento interno à direita*/
+}
+
+/*Seleciona os paragrafos dentro do único elemento com o respectivo id*/
+#statistic-content p {
+    text-align: center; /*Alinha o texto para o centro*/
+    width: 90%; /*Define a width como 90%*/
+    margin: auto; /*Centraliza usando o atributo de margem*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#statistic-screen img {
+    height: 20px; /*Define uma altura*/
+}
+
+/*Seleciona botões do único elemento com o respectivo id*/
+#statistic-screen button {
+    position: absolute; /*A posição se torna absoluta em relação ao pai relativo*/
+    right: 15px; /*Define que a distância da direita do relative será apenas de 12px*/
+    top: 12px; /*Define que a distância superior do relative será apenas de 12px*/
+    border-width: 0; /*Define a espessura da borda como 0*/
+    cursor: pointer; /*Muda o tipo do cursor para o ponteiro ao passar por cima*/
+    font-size: 1.2em; /*Muda o tamanho da fonte*/
+    background-color: white; /*Define uma cor de fundo*/
+}
+
+/*Seleciona botões on hover do único elemento com o respectivo id*/
+#statistic-screen button:hover {
+    transition: 300ms; /*Define um tempo de transição de animação*/
+    color: white; /*Muda a cor da fonte*/
+}
+
+/*Seleciona o único elemento com o respectivo id*/
+#statistic-graphic {
+    display: flex; /*Muda o tipo de display para flexivel*/
+    justify-content: center; /*Justifica o flexbox de modo que o elemento fique no centro*/
+}

@@ -1,0 +1,18 @@
+/*
+*Seleciona todos os elementos HTML, seja superior, o próprio elemento ou inferior
+*/
+*,
+*::before,
+*::after {
+    margin: 0;                  /*Define a margem de todos os elementos como 0*/
+    padding: 0;                 /*Define a expansão do elemento como 0*/
+    box-sizing: border-box;     /*Define o width e o height dos elementos como border-box, ou seja, sua width e seu height serão de um ponto até o outro, seja tendo padding ou border*/
+    text-decoration: none;      /*Remove os "decorations" dos textos, como sublinhado, etc.*/
+}
+
+/*
+*Seleciona as listas ordenadas e as não ordenadas
+*/
+ul, ol {
+    list-style-type: none;      /*Remove o 'icone' de item da lista*/
+}

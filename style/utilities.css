@@ -1,0 +1,377 @@
+/*-----Screen-----*/
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para mudar a altura mínima do elemento||
+* em relação ao viewport height (altura da tela)                       ||
+*                                                                      ||
+* min-height: altura mínima do elemento                                ||
+* vh: unidade de medida em relação ao tamanho total da tela            ||
+*---------------------------------------------------------------------//*/
+.min-h-100 {
+    min-height: 100vh;
+}
+
+.min-h-95 {
+    min-height: 95vh;
+}
+
+.min-h-90 {
+    min-height: 90vh;
+}
+
+.min-h-80 {
+    min-height: 80vh;
+}
+
+.min-h-75 {
+    min-height: 75vh;
+}
+
+.min-h-50 {
+    min-height: 50vh;
+}
+
+.min-h-40 {
+    min-height: 40vh;
+}
+
+.min-h-30 {
+    min-height: 30vh;
+}
+
+.min-h-25 {
+    min-height: 25vh;
+}
+
+.min-h-10 {
+    min-height: 10vh;
+}
+
+.min-h-100 {
+    min-height: 100vh;
+}
+
+.min-h-5 {
+    min-height: 5vh;
+}
+
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para mudar o display dos elementos    ||
+* para torná-los mais flexíveis em relação à página.                   ||
+* A única diferença entre eles é o atributo 'justify-content',         ||
+* deixando o elemento no inicio meio ou final da página horizontalmente||
+* , mas verticalmente será sempre centralizado                         ||
+*                                                                      ||
+* display: flex = define o elemento como flex, deixando-o flexivel     ||
+* align-items: center = centraliza o conteúdo verticalmente            ||
+* justify-content: ? = define a posição horizontal                     ||
+* flex-direction: ? = define a direção do conteúdo (row / column)      ||
+*---------------------------------------------------------------------//*/
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.d-flex-self-start {
+    align-self: flex-start;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.d-flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.d-flex-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-flex-vertical {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para definir a margem do elemento    ||
+*---------------------------------------------------------------------//*/
+.w-start {
+    margin-right: auto; /*Irá criar uma margem à direita para empurrar o conteúdo horizontalmente para a esquerda*/
+}
+
+.w-center {
+    margin: 0 auto; /*Irá criar uma margem para centralizar o conteúdo horizontalmente*/
+}
+
+.w-end {
+    margin-left: auto; /*Irá criar uma margem à esquerda para empurrar o conteúdo horizontalmente para a direita*/
+}
+
+.w-15 {
+    width: 15%;    /*Define a largura da tela como 15%*/
+}
+
+.w-20 {
+    width: 20%;    /*Define a largura da tela como 20%*/
+}
+
+.w-25 {
+    width: 25%;    /*Define a largura da tela como 25%*/
+}
+
+.w-30 {
+    width: 30%;    /*Define a largura da tela como 30%*/
+}
+
+.w-35 {
+    width: 35%;    /*Define a largura da tela como 35%*/
+}
+
+.w-50 {
+    width: 50%;    /*Define a largura da tela como 50%*/
+}
+
+.w-80 {
+    width: 80%;    /*Define a largura da tela como 80%*/
+}
+
+.w-90 {
+    width: 90%;    /*Define a largura da tela como 90%*/
+}
+
+.w-95 {
+    width: 95%;    /*Define a largura da tela como 95%*/
+}
+
+.w-100 {
+    width: 100%;    /*Define a largura da tela como 100%*/
+}
+
+/*---------------------------------------------------------------------\\
+* As classes a seguir são usadas para definir a cor do texto do elemento||
+*----------------------------------------------------------------------//*/
+.c-black {
+    color: black;
+}
+
+.c-white {
+    color: white;
+}
+
+/*----Background Color----*/
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para definir a cor do plano de fundo  ||
+*---------------------------------------------------------------------//*/
+.bg-black {
+    background-color: #101010;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+/*-----Margin-----*/
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para definir margens no elemento      ||
+* Margens nada mais é do que o espaçamento externo do elemento         ||
+*                                                                      ||
+* margin-bottom = margem inferior                                      ||
+* margin-top = margem superior                                         ||
+* margin-left = margem à esquerda                                      ||
+* margin-right = margem à direita                                      ||
+*---------------------------------------------------------------------//*/
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-25 {
+    margin-bottom: 25px;
+}
+
+.mb-vh-1 {
+    margin-bottom: 1vh;
+}
+
+.mb-vh-5 {
+    margin-bottom: 5vh;
+}
+
+.mb-vh-10 {
+    margin-bottom: 10vh;
+}
+
+.mb-vh-15 {
+    margin-bottom: 15vh;
+}
+
+.mb-vh-20 {
+    margin-bottom: 20vh;
+}
+
+.mb-vh-25 {
+    margin-bottom: 25vh;
+}
+
+.me-5 {
+    margin-right: 5px;
+}
+
+.me-10 {
+    margin-right: 10px;
+}
+
+.me-15 {
+    margin-right: 15px;
+}
+
+.me-20 {
+    margin-right: 20px;
+}
+
+.me-25 {
+    margin-right: 25px;
+}
+
+/*----Padding----*/
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para definir o padding no elemento    ||
+* Padding nada mais é do que o espaçamento interno do elemento         ||
+*                                                                      ||
+* padding-bottom = padding inferior                                    ||
+* padding-top = padding superior                                       ||
+* padding-left = padding à esquerda                                    ||
+* padding-right = padding à direita                                    ||
+*---------------------------------------------------------------------//*/
+.p-5 {
+    padding: 5px;   
+}
+
+.p-10 {
+    padding: 10px;   
+}
+
+
+.p-15 {
+    padding: 15px;   
+}
+
+
+.p-20 {
+    padding: 20px;   
+}
+
+.p-25 {
+    padding: 25px;   
+}
+
+.pb-5 {
+    padding-bottom: 5px;   
+}
+
+.pb-10 {
+    padding-bottom: 10px;   
+}
+
+
+.pb-15 {
+    padding-bottom: 15px;   
+}
+
+
+.pb-20 {
+    padding-bottom: 20px;   
+}
+
+.pb-25 {
+    padding-bottom: 25px;   
+}
+
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para definir o padding no elemento    ||
+* O atributo transform em si consegue fazer muitas coisas, mas         ||
+* em um termo genérico, ele literalmente transforma a imagem.          ||
+* seja seu ângulo, ou sua dimensão                                     ||
+*                                                                      ||
+* transform: rotate() = gira o elemento para os graus definidos        ||
+* deg = degress/graus                                                  ||
+*---------------------------------------------------------------------//*/
+/*-----Transformações-----*/
+.flip-90 {
+    transform: rotate(90deg);
+}
+
+.flip-270{
+    transform: rotate(270deg);
+}
+
+/*-----Imagens------*/
+/*A seguinte classe cria uma borda verde no elemento*/
+.bordar {
+    border: 1px solid green;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.absolute-right {
+    right: 0;
+}
+
+.absolute-top {
+    top: 0;
+}
+
+.absolute-left {
+    left: 0;
+}
+
+.absolute-bottom {
+    bottom: 0;
+}
+
+/*--------------------------------------------------------------------\\
+* As classes a seguir são usadas para definir alterar o texto          ||
+*---------------------------------------------------------------------//*/
+.text-center {
+    text-align: center;
+}

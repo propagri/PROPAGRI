@@ -1,0 +1,299 @@
+<!--Inicia a TAG DOCTYPE, que avisa ao navegador a versão do HTML usada-->
+<!DOCTYPE html>
+<!--Inicia o documento HTML-->
+<html lang="pt-br">
+<!--Informa metadados ao navegador-->
+<head>
+    <!--tag meta de charset que informa ao navegador a tabela de caracteres a ser usada-->
+    <meta charset="UTF-8">
+    <!--Tag meta de http-equiv utilizada para dar suporte a aplicações que só funcionam nas versões mais antigas do IE (Internet Explorer)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Tag meta de viewport para controlar a proporção da página nos mais diversos dispositivos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tag meta de keywords que informa aos sistemas de pesquisa/busca palavras-chave do respectivo site-->
+    <meta name="keywords" content="Simulado, EPAGRI 2023">
+    <!--Tag meta de robots para informar que os sistemas de pesquisa não seguirão os links indexados no site-->
+    <meta name="robots" content="noindex">
+    <!--Tag meta de author para informar os autores da página-->
+    <meta name="author" content="Alexandre, Leandro Neri, Gustavo Lucas, Matheus Oliveira, Rodrigo">
+    <!--Tag meta de description para dar uma pequena descrição da página-->
+    <meta name="description" content="Simulado Analista de Sistemas EPAGRI 2023">
+    <!--Tag title para informar um título para a página, aparecerá na aba-->
+    <title>PROPAGRI</title>
+    <!--Tags de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="style/reset.css">
+    <!--Tag de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="style/utilities.css">
+    <!--Tag de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<!--Literalmente o corpo da página, tudo que estiver dentro da tag body irá aparecer na página-->
+<body>
+    <!--Tag header para cabeçalho/navegação/logotipo-->
+    <header class="d-flex-space-between" id="header">
+        <!--Tag a para a inserção de um hyperlink-->
+        <a href="#"><img id="logo" src="./img/logo_propagri.png" style="height: 40px;" ></a>
+        <!--Tag para criar lista não ordenada (unordered list)-->
+        <ul>
+            <!--Tags li para criar um item na lista seguida de uma tag a para inserir
+                um hyperlink de redirecionamento dentro da mesma página-->
+			<!--Botão para ativar e desativar o modo escuro-->
+            <li id="dark-mode" class="dark-mode" onclick="dark_mode()">
+				<!--label para a estilização do botão-->
+                <label class="switch">
+					<!--Checkbox que irá funcionar visualmente para o botão de ligado e desligado-->
+                    <input type="checkbox" id="checkin" notchecked>
+					<!--Span para conter a imagem do modo escuro-->
+                    <span class="slider round"></span>
+                </label>
+			</li>
+			<!--Redirecionará para inicio-->
+            <li><a href="#inicio" class="nav-link">Início</a></li>
+            <!--Redirecionará para a área de downloads-->
+            <li><a href="#downloads" class="nav-link">Downloads</a></li>
+            <!--Redirecionará para os créditos EPAGRI-->
+            <li><a href="#epagri" class="nav-link">EPAGRI</a></li>
+            <!--Redirecionará para os créditos FEPESE-->
+            <li><a href="#fepese" class="nav-link">FEPESE</a></li>
+            <!--Redirecionará para as informações sobre a PMI-->
+            <li><a href="#pmi" class="nav-link">Sobre</a></li>
+            <!--Redirecionará para os créditos-->
+            <li><a href="./credits.html" class="nav-link">Créditos</a></li>
+        </ul>
+    </header>
+
+    <!--Tag article utilizada semânticamente para conter o conteúdo principal ou as informações da página-->
+    <article>
+        <!--Tag section semântica para conter as informações de inicio e suas propriedades CSS-->
+        <section id="inicio" class="article min-h-100 w-center d-flex-center flex-column" style="height: 100%;">
+            <!--Tag div para criar um container para conter as informações de inicio-->
+            <div class="inicio article-small-width">
+                <!--Tag de titulo/cabeçalho h1 para informar sobre qual simulado é a página-->
+                <h1 class="title mb-25" id="title_parallax">Simulado EPAGRI 2023 - Concurso para Analista de Sistemas</h1>
+                <!--Tag div para conter os parágrafos que informam sobre o que é o simulado-->
+                <div class="mb-25">
+                    <!--Tag p para parágrafo, informações sobre o simulado-->
+                    <p id="text_1_parallax">
+						A <b>PROPAGRI</b> é um projeto desenvolvido por alunos do 1° semestre de ADS (Análise e Desenvolvimento de Sistemas) da FATEC de Carapicuíba.
+						O projeto busca apresentar um simulado automatizado da prova do concurso para Analista de Sistemas da <b>EPAGRI</b> - Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina - aplicado pela <b>FEPESE</b> - Fundação de Estudos e Pesquisas Socioeconômicos.
+                    </p>
+                    <!--Tag p para parágrafo, informações sobre o simulado-->
+                    <p id="text_2_parallax">
+						Os alunos se dedicaram em adaptar os conhecimentos aprendidos em aula para desenvolver o projeto, procurando assim reproduzir a prova de um concurso em forma de quiz.
+						Com isso, os alunos foram capazes de aplicar os conhecimentos teóricos adquiridos no curso de ADS em um caso real, desenvolvendo habilidades fundamentais para um profissional.
+						</p>
+                </div>
+                <!--Tag div para conter os links de redirecionamento-->
+                <div class="d-flex-center mb-25">
+                    <!--Tag a para conter um hyperlink que irá iniciar instantaneamente o simulado-->
+                    <a href="./questions/instrucoes.html" class="btn btn-black me-20" id="btn-sim">Iniciar simulado</a>
+                    <!--Tag a para conter um hyperlink que irá redirecionar o usuário para a área de downloads-->
+                    <a href="#downloads" class="btn btn-outline-black" id="btn-gab-in">Prova e Gabarito</a>
+                </div>
+            </div>
+            <!--Tags para adicionar as imagens que serão usadas como complemento no background do site-->
+            <img src="img/fundo.png" class="colinas" id="colinas">
+            <img src="img/floresta.png" class="floresta" id="floresta">
+            
+        </section>
+
+        <!--Tag section para conter as informações de downloads e suas propriedades CSS-->
+        <section id="downloads" class="min-h-50 article-shadow mb-vh-10 d-flex-space-between relative">
+            <!--Tag div para conter as informações de downloads-->
+            <div class="downloads article-small-width c-white p-20">
+                <!--Tag de titulo/cabeçalho h1 para destacar a área Downloads-->
+                <h1 class="title mb-25">Downloads</h1>
+                <!--Tag div para conter informações sobre a área de Downloads-->
+                <div class="mb-50">
+                    <p>Aqui ficam disponíveis os downloads dos PDFs dos respectivos arquivos, sendo eles a prova original do simulado do site da EPAGRI/FEPESE e seu gabarito oficial.</p>
+                    <p>Ambos são redirecionados para a página cujos direitos autorais são reservados à EPAGRI/FEPESE.</p>
+                </div>
+                <!--Tag div para conter os hyperlinks que irão redirecionar o usuário para a prova e seu gabarito-->
+                <div class="d-flex-start">
+                    <!--Tag a de hyperlink que redireciona o usuário para a prova EPAGRI 2023-->
+                    <a href="https://2022epagri.fepese.org.br/?go=download&path=2&inline=1&arquivo=S201.pdf" class="btn btn-white me-20" id="btn-test">Prova</a>
+                    <!--Tag a de hyperlink que redireciona o usuário para o gabarito EPAGRI 2023-->
+                    <a href="https://2022epagri.fepese.org.br/?go=download&inline=1&arquivo=2022_Epagri_Gabarito_Definitivo.pdf" class="btn btn-none-white" id="btn-gab">Gabarito</a>
+                </div>
+            </div>
+            <!--Tag para adicionar a imagem que será usada para complementar a seção de "downloads"-->
+            <img src="./img/download.png" alt="imagem concurso fepese" class="img-article" style="height: 430px; width: 430px;">
+        
+			<!--Tag p para criar um novo parágrafo; tag small para diminuir o tamanho da fonte; tag a para criar uma referência de hyperlink-->
+            <p class="absolute absolute-right absolute-bottom"><small>Fonte da imagem: <a href="https://www.freepik.com/premium-vector/download-vector-illustration-file-download-50-percent-internet-graph-with-load-text-download-arrow-cloud-storage-loading-concept-vector-black-line-icon-white-background_34566121.htm">freepik.com</a></small></p>
+        </section>
+
+        <!--Tag section para conter as informações da EPAGRI e suas propriedades CSS-->
+        <section id="epagri" class="min-h-50 article-shadow mb-vh-10 d-flex-end text-end bg-white relative">
+            <!--Tag para adicionar a imagem que será usada para complementar a seção referente às informações da "EPAGRI"-->
+            <img src="./img/agricultura.jpg" alt="imagem trator epagri" class="img-article" id="img-agri" style="height: 100%;">
+            <!--Tag div para conter informações sobre a EPAGRI-->
+            <div class="epagri article-medium-width p-20" >
+                
+                <!--Tag h1 de título para destacar a EPAGRI-->
+                <h1 class="title mb-10" id="bold-title-epagri">EPAGRI</h1>
+                <!--Tag div para conter informações sobre a EPAGRI-->
+                <div class="mb-25">
+                    <!--Parágrafos para textos e informações sobre a EPAGRI-->
+                    <p>"A Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina – <b id="bold-epagri">EPAGRI</b> – é uma empresa pública, vinculada ao Governo do Estado de Santa Catarina por meio da Secretaria de Estado da Agricultura, da Pesca e do Desenvolvimento Rural.</p>
+                    <!--Tag p para parágrafo-->
+					<p>A criação da Empresa, em 1991, uniu os trabalhos de pesquisa e extensão rural e pesqueira, somando décadas de experiência em diferentes áreas e fortalecendo ainda mais o setor.
+                        A EPAGRI tem como objetivo promover a preservação, recuperação, conservação e utilização sustentável dos recursos naturais."</p>
+                    <!--Parágrafo em uma tag small (para deixar pequeno) seguido de um hyperlink para 
+                        redirecionar para a localização de onde as informações foram retiradas-->
+                    <p><small>Fonte: <a class="font" href="https://www.epagri.sc.gov.br/">epagri.sc.gov.br/</a></small></p>
+                </div>
+                <!--Tag div que irá conter um hyperlink-->
+                <div class="d-flex-end">
+                    <!--Tag a para conter um hyperlink de redirecionamento para o site da EPAGRI-->
+                    <a href="https://www.epagri.sc.gov.br/" class="link link-black d-flex-vertical"><span class="me-5" id="bold-link-epagri">Clique aqui para acessar a página da EPAGRI</span> <img id="svg-white" src="./svg/arrow.svg" class="flip-90"></a>
+                </div>
+            </div>
+            <p class="absolute absolute-left absolute-top"><small>Fonte da imagem: <a href="https://www.freepik.com/premium-photo/internet-things-iot-with-farming-smart-concept-agriculture-modern-technology-are-used_33394546.htm">freepik.com</a></small></p>
+        </section>
+
+        <!--Tag section para conter as informações da FEPESE e suas propriedades CSS-->
+        <section id="fepese" class="min-h-50 article-shadow mb-vh-10 d-flex-start bg-black c-white relative">
+
+            <!--Tag div para conter informações sobre a FEPESE-->
+            <div class="fepese article-medium-width p-20">
+                <!--Tag h1 de título para destacar a FEPESE-->
+                <h1 class="title mb-10">FEPESE</h1>
+                <!--Tag div para conter informações sobre a FEPESE-->
+                <div class="mb-25">
+                    <!--Parágrafos para textos e informações sobre a FEPESE-->
+                    <p>"A <b>FEPESE</b> é referência nacional em pesquisas e inovações tecnológicas. Ela apoia ideias, projetos, empresas e organizações, para conectar pessoas ao conhecimento.
+                        A FEPESE é uma banca conhecida por seus concursos e tem o objetivo de executar as atividades necessárias para a realização de concursos públicos."
+                    </p>
+                    
+                    <!--Parágrafo em uma tag small (para deixar pequeno) seguido de um hyperlink para 
+                        redirecionar para a localização de onde as informações foram retiradas-->
+                    <p><small>Fonte: <a class="font" href="https://www.fepese.org.br/">fepese.org.br/</a></small></p>
+                </div>
+                <!--Tag div que irá conter um hyperlink-->
+                <div class="d-flex-start">
+                    <!--Tag a para conter um hyperlink de redirecionamento para o site da FEPESE-->
+                    <a href="https://fepese.org.br/" class="link link-white d-flex-vertical"><img src="./svg/arrow.svg" id="svg-black" class="flip-270 me-5"> <span>Clique aqui para acessar a página da FEPESE</span></a>
+                </div>
+            </div>
+            <!--Tag para adicionar a imagem que será usada para complementar a seção de informações sobre o concurso em si-->
+            <img src="./img/concurso.jpg" alt="imagem concurso fepese" id="img-test" class="img-article">
+			<!--Tag p para criar um novo parágrafo; tag small para diminuir o tamanho da fonte; tag a para criar uma referência de hyperlink-->
+            <p class="absolute absolute-right absolute-bottom"><small>Fonte da imagem: <a href="https://abpeducom.org.br/educomunicacao-e-conteudo-exigido-no-concurso-publico-de-professores-da-cidade-de-sao-paulo/">abpeducom.org.br</a></small></p>
+        </section>
+
+        <!--Tag section para conter as informações da PMI e suas propriedades CSS-->
+        <section id="pmi" class="min-h-50 article-shadow  mb-vh-5">
+            <!--Tag section para conter a primeira caixa de informações do sobre-->
+            <section class="d-flex-end text-end relative">
+                <!--Tag para adicionar a imagem que será usada representar a instituição responsável pelos alunos (Fatec Carapicuíba)-->
+                <img src="./img/fatec-carapicuiba.jpg" alt="imagem trator epagri" class="img-article" style="height: 100%;">
+                <!--Tag div para conter informações sobre a PMI-->
+                <div class="pmi article-medium-width p-20">
+                    <!--Tag h1 de título para destacar a PMI-->
+                    <h1 class="title mb-10" id="bold-title-pmi">Sobre</h1>
+                    <!--Tag div para conter informações sobre a PMI-->
+                    <div class="">
+                        <!--Parágrafos para textos e informações sobre a PMI-->
+                        <p>
+                            Esse projeto tem como foco apresentar o simulado da prova do concurso de Análise e Desenvolvimento de Sistemas da EPAGRI - Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina - aos interessados. A prova que até então era disponibilizada em PDF foi automatizada pelos autores e disponibilizada para que os usuários possam fazer o simulado online.
+                            
+                            Todas as questões são de múltipla escolha, de maneira que só é possível respondê-la uma vez, porém a mesma questão poderá ser visualizada mesmo após o avanço.
+                            Para maior facilidade na resolução da prova, ao responder cada pergunta, o sistema apresentará uma janela informando se o usuário acertou ou errou a questão e também sua resposta correta.
+                            O simulado pode ser finalizado a qualquer momento, e ao isso ocorrer, o usuário poderá ver seu desempenho.
+                            Também são disponibilizados neste site a prova original, assim como o gabarito, que podem ser acessador no formato PDF, cujos direitos autorais são totalmente reservados a EPAGRI/FEPESE.</p>            
+                    </div>
+                </div>
+				
+				<!--Tag p para criar um novo parágrafo; tag small para diminuir o tamanho da fonte; tag a para criar uma referência de hyperlink-->
+                <p class="absolute absolute-left absolute-bottom"><small>Fonte da imagem: <a href="https://www.google.com/maps/place/Fatec+Carapicu%C3%ADba/@-23.5168052,-46.8360132,3a,89.8y,90t/data=!3m8!1e2!3m6!1sAF1QipNi5SpdOnWGqCamxjBmtfC1qVCsf0BIk2n73sV2!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNi5SpdOnWGqCamxjBmtfC1qVCsf0BIk2n73sV2%3Dw203-h114-k-no!7i872!8i493!4m7!3m6!1s0x94cf01e601979e49:0x827d23249235632a!8m2!3d-23.5170851!4d-46.8354007!10e5!16s%2Fg%2F120hnrt7?hl=pt-BR">maps.google.com</a></small></p>
+            </section>
+            <!--Tag section para conter a segunda caixa de informações do sobre-->
+            <section class="d-flex-end text-end flex-column">
+                <!--Tag div para conter informações sobre a PMI-->
+                <div class="pmi p-20">
+                    <!--Tag div para conter informações sobre a PMI-->
+                    <div class="mb-25 text-end credits">
+                        <!--Parágrafos para textos e informações sobre a PMI-->
+                        <!--Tag DIV para conter informações sobre o PROPAGRI-->
+                        <div>
+							<!--Tag p para parágrafo do sobre e informações sobre os autores e orientadores, tag b para tornar o texto negrito-->
+                            <p>O PROPAGRI foi desenvolvido por 5 alunos do 1° semestre de ADS (Análise e Desenvolvimento de Sistemas) da FATEC de Carapicuíba no ano de 2023 na disciplina <b id="bold-pmi">PMI (Programação em Microinformática)</b></p>
+							<!--Tag p para parágrafo do sobre e informações sobre os autores e orientadores-->
+							<p>sob orientação e coorientação de docentes.</p>
+                        </div>
+                        <!--Tag DIV para conter informações sobre o orientador-->
+                        <div class="">
+							<!--Tag h4 para criar título-->
+                            <h4>Orientadora</h4>
+							<!--Tag p para parágrafo-->
+                            <p>Msc. FELIX, Rita</p>
+                        </div>
+                        <!--Tag DIV para conter informações sobre o coorientador-->
+                        <div>
+							<!--Tag h4 para criar título-->
+                            <h4>Coorientador</h4>
+							<!--Tag p para parágrafo-->
+                            <p>Msc. Lobianco, José Luís Barboza</p>
+                        </div>
+                        <!--Tag DIV para conter informações sobre o revisor-->
+                        <!--<div> -->
+							<!--Tag h4 para criar título-->
+                            <!--<h4>Revisor</h4> -->
+							<!--Tag p para parágrafo-->
+                            <!--<p>----------</p> -->
+                        <!--</div> -->
+                        <!--Tag DIV para conter informações sobre os alunos-->
+                        <div>
+							<!--Tag h4 para criar título-->
+                            <h4>Autores do PROPAGRI</h4>
+							<!--Tag p para parágrafo-->
+                            <p>Pereira, Alexandre</p>
+							<!--Tag p para parágrafo-->
+                            <p>Lucas, Gustavo</p>
+							<!--Tag p para parágrafo-->
+                            <p>Ferrareis, Leandro</p>
+							<!--Tag p para parágrafo-->
+                            <p>Anastácio, Matheus</p>
+							<!--Tag p para parágrafo-->
+                            <p>Anacleto, Rodrigo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!--Tag div para conter os links de redirecionamento-->
+        <div class="d-flex-center mb-25">
+            <!--Tag a para conter um hyperlink que irá iniciar instantaneamente o simulado-->
+            <a href="./questions/instrucoes.html" class="btn btn-none-white me-20">Iniciar simulado</a>
+            <!--Tag a para conter um hyperlink que irá redirecionar o usuário para a área de downloads-->
+            <a href="./credits.html" class="btn btn-white">Créditos</a>
+        </div>
+    </article>
+
+    <!--Tag footer para criar o rodapé da página-->
+    <footer  class="d-flex-center flex-column article-shadow c-white" id="footer-spc">
+        <!--Tag div para conter as informações do rodapé, como logotipo e a descrição do site-->
+        <div class="d-flex-space-between mb-20 pb-20 w-100" id="footer-field">
+            <!--Tag div para conter as logotipos de crédito-->
+            <div id="footer-credit" class="w-center">
+                <!--Tag a para redirecionamento à pagina da FATEC Carapicuíba seguida de uma tag img para inserir sua logotipo-->
+                <a href="http://www.fateccarapicuiba.edu.br/"><img src="./img/logo_fatec.png" height="60px"></a>
+                <!--Tag a para redirecionamento à pagina da FATEC Carapicuíba de Análise e Desenvolvimento de Sistemas
+                    e uma tag img para inserir sua logotipo-->
+                <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"><img src="./img/logo_ads.png" height="60px"></a>
+                <!--Tag a para redirecionamento à pagina do Centro Paula Souza seguida de uma tag img para inserir sua logotipo-->
+                <a href="https://www.cps.sp.gov.br/"><img src="./img/logo_cps.png" height="60px"></a>
+            </div>
+        </div>
+
+        <!--Declaração de direitos de site-->
+        <p>© Direitos do website reservados.</p>
+    </footer>
+    
+    <!--Tag script para inserir ou importar scripts-->
+    <script src="script/script.js"></script>
+</body>
+</html>

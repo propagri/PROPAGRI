@@ -1,0 +1,84 @@
+/*Seleciona todas as tags article*/
+article {
+    padding-top: 70px; /* Define um espaçamento superior de 70px para o elemento article */
+}
+
+/*Seleciona o unico ID*/
+#instruction-window {
+    border: 1px solid rgba(0, 0, 0, 0.5); /* Define uma borda sólida com cor preta e opacidade de 0.5 */
+    border-radius: 10px; /* Define um raio de borda de 10px, arredondando os cantos do elemento */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Aplica uma sombra suave ao elemento */
+    padding: 20px 20px; /* Define um espaçamento interno de 20px nas laterais e superior/inferior */
+    margin: 20px 0px; /* Define um espaçamento externo de 20px na parte superior e inferior e 0px nas laterais */
+}
+
+/*Seleciona todos os elementos com a classe*/
+.instruction-list {
+    list-style-type: decimal; /* Define o estilo de lista como números */
+    padding-left: 20px; /* Define um espaçamento interno de 20px na parte esquerda da lista */
+}
+
+/*Seleciona todos os elementos com a classe*/
+.instruction-li {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a família de fonte para o elemento li */
+    text-align: center; /* Centraliza o texto no elemento li */
+}
+
+/*Seleciona todas as tags h2*/
+h2 {
+    text-align: center; /* Centraliza o texto no elemento h2 */
+    color: #92bd1e; /* Define a cor do texto como um verde claro */
+}
+
+/*Seleciona todas as tags p*/
+p {
+    text-align: center; /* Centraliza o texto no elemento p */
+}
+
+/*Seleciona todos os elementos com a classe*/
+.border-bottom {
+    border: 1px solid rgba(0, 0, 0, 0.15); /* Define uma borda sólida com cor preta e opacidade de 0.15 */
+    border-width: 0px 0px 1px 0px; /* Define a espessura da borda, 0px nas laterais e 1px na parte inferior */
+    padding-bottom: 10px; /* Define um espaçamento interno de 10px na parte inferior do elemento */
+    margin-bottom: 10px; /* Define um espaçamento externo de 10px na parte inferior do elemento */
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link {
+    border: 1px solid rgba(255, 255, 255, 0);   /*Cria uma borda de 1 pixel, 'sólida' da cor preta, porém completamente transparente para não haver erro na transição*/
+    background-color: rgba(255, 255, 255, 0);   /*Define a cor da borda*/
+    border-radius: 20px;             /*'Arredonda' as bordas do elemento em 5px*/
+    padding: 5px 10px;               /*Cria um 'espaçamento interno' de 5 pixels para todas as direções*/
+    color: rgb(0, 0, 0);           /*Define a cor dos textos como cinza*/
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link:hover {
+    transition: 200ms;                        /*Cria uma transição dentro do tempo definido para os elementos abaixo*/
+    border: 1px solid rgb(255, 255, 255);   /*Define a borda de 1 pixel já criada acima, porém agora ela ficará levemente visível*/
+    background-color: rgb(255, 255, 255);   /*Define o background já criado acima, porém agora levemente visível*/
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link-dark {
+    border: 1px solid rgba(255, 255, 255, 0);   /*Cria uma borda de 1 pixel, 'sólida' da cor preta, porém completamente transparente para não haver erro na transição*/
+    background-color: rgba(255, 255, 255, 0);   /*Define a cor da borda*/
+    border-radius: 20px;             /*'Arredonda' as bordas do elemento em 5px*/
+    padding: 5px 10px;               /*Cria um 'espaçamento interno' de 5 pixels para todas as direções*/
+    color: rgba(255, 255, 255, 0.8);           /*Define a cor dos textos como cinza*/
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link-dark:hover {
+    transition: 200ms;                        /*Cria uma transição dentro do tempo definido para os elementos abaixo*/
+    border: 1px solid rgba(0, 0, 0, 0.25);   /*Define a borda de 1 pixel já criada acima, porém agora ela ficará levemente visível*/
+    background-color: rgba(0, 0, 0, 0.25);   /*Define o background já criado acima, porém agora levemente visível*/
+}

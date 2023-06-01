@@ -1,0 +1,627 @@
+/*
+*Seleciona o documento HTML, assim como o corpo para definir alguns atributos
+*/
+html,
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  /*Define a fonte geral da página*/
+    background-color: #F5F5F5;      /*Define o a cor de fundo*/
+    min-height: 100vh;                /*Define o tamanho minimo da página*/
+    font-size: 19px;                  /*Define o tamanho geral da fonte*/
+}
+
+/*
+*Seleciona o cabeçalho da página, onde ficará a logotipo e a navegação de links
+*/
+header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    /*Define a fonte do cabeçalho*/
+    width: 100%;                /*Define a largura do cabeçalho como 100%*/
+    position: fixed;            /*Define a posição do cabeçalho como fixo, logo, ficará fixo em relação à tela do usuário, não sairá com scroll*/
+    padding: 10px 0px;          /*Define um padding de 10px verticalmente e 0px horizontalmente*/
+    font-size: 18px;            /*Define o tamanho da fonte do cabeçalho como 18px*/
+    z-index: 100;               /*Posiociona esse elemento na camada 100 de profundidade em relação à ordem de sobreposição dos elementos*/
+    background-color:#92bd1e; /*Define a cor de fundo como um tom específico de verde*/
+    min-width: 1000px;
+    max-height: 60px;
+}
+
+/*
+*Seleciona todas as sections da página
+*/
+section {
+    position: relative; /*Altera a posição do elemento, tendo como referência a sua posição inicial*/
+}
+
+/*
+*Seleciona os filhos span diretos e indiretos do cabeçalho (header)
+*/
+header span {
+    margin-left: 20px;      /*Define uma margem à esquerda do elemento selecionado*/
+}
+
+/*
+*Seleciona os filhos ul diretos e indiretos do cabeçalho (header)
+*/
+header ul {
+    margin-right: 10px;    /*Define uma margem à direita do elemento selecionado*/
+    user-select: none;     /*Impede que o usuário consiga copiar o texto, mas nesse caso serve para 'eliminar' espaçamentos entre os links*/
+}
+
+/*
+*Seleciona os filhos li diretos e indiretos do cabeçalho (header)
+*/
+header li {
+    display: inline;    /*Define o display como inline, então os elementos terão apenas o tamanho do que há dentro*/
+    margin: 0 10px;     /*Define uma margem vertical de 0 e horizontal de 10 pixels*/
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link {
+    border: 1px solid rgba(255, 255, 255, 0);   /*Cria uma borda de 1 pixel, 'sólida' da cor preta, porém completamente transparente para não haver erro na transição*/
+    background-color: rgba(255, 255, 255, 0);   /*Define a cor da borda*/
+    border-radius: 20px;             /*'Arredonda' as bordas do elemento em 5px*/
+    padding: 5px 10px;               /*Cria um 'espaçamento interno' de 5 pixels para todas as direções*/
+    color: rgb(0, 0, 0);           /*Define a cor dos textos como cinza*/
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link:hover {
+    transition: 200ms;                        /*Cria uma transição dentro do tempo definido para os elementos abaixo*/
+    border: 1px solid rgb(255, 255, 255);   /*Define a borda de 1 pixel já criada acima, porém agora ela ficará levemente visível*/
+    background-color: rgb(255, 255, 255);   /*Define o background já criado acima, porém agora levemente visível*/
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative; /* Define a posição relativa para que os elementos filhos se posicionem em relação a ele */
+    display: inline-block; /* Define o elemento como um bloco que se ajusta ao seu conteúdo */
+    width: 80px; /* Define a largura do switch como 80px */
+    height: 34px; /* Define a altura do switch como 34px */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0; /* Define a opacidade do input como 0 para torná-lo invisível */
+    width: 0; /* Define a largura do input como 0 para torná-lo invisível */
+    height: 0; /* Define a altura do input como 0 para torná-lo invisível */
+}
+
+/* The slider */
+.slider {
+    position: absolute; /* Define a posição absoluta para que o slider possa ser posicionado dentro do switch */
+    cursor: pointer; /* Altera o cursor para o ponteiro quando o mouse estiver sobre o slider */
+    top: 0; /* Posiciona o slider no topo do switch */
+    left: 0; /* Posiciona o slider à esquerda do switch */
+    right: 0; /* Posiciona o slider à direita do switch */
+    bottom: 0; /* Posiciona o slider na parte inferior do switch */
+    background-color: #ccc; /* Define a cor de fundo do slider como cinza claro */
+    -webkit-transition: .4s; /* Adiciona uma transição de 0.4s com prefixo para navegadores WebKit */
+    transition: .4s; /* Adiciona uma transição de 0.4s */
+}
+
+.slider:before {
+    position: absolute; /* Define a posição absoluta para que o pseudo-elemento possa ser posicionado dentro do slider */
+    content: "🌙"; /* Define o conteúdo do pseudo-elemento como um emoji de lua */
+    height: 26px; /* Define a altura do pseudo-elemento como 26px */
+    width: 26px; /* Define a largura do pseudo-elemento como 26px */
+    left: 4px; /* Posiciona o pseudo-elemento 4px à esquerda do slider */
+    bottom: 4px; /* Posiciona o pseudo-elemento 4px abaixo do slider */
+    background-color: white; /* Define a cor de fundo do pseudo-elemento como branco */
+    -webkit-transition: .4s; /* Adiciona uma transição de 0.4s com prefixo para navegadores WebKit */
+    transition: .4s; /* Adiciona uma transição de 0.4s */
+}
+
+input:checked + .slider {
+    background-color: #121212; /* Define a cor de fundo do slider como preto quando o input estiver marcado */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #000000; /* Adiciona uma sombra sutil ao slider quando o input estiver com foco */
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px); /* Realiza uma transformação de translação no eixo X para mover o pseudo-elemento para a direita */
+    -ms-transform: translateX(26px); /* Realiza uma transformação de translação no eixo X para mover o pseudo-elemento para a direita */
+    transform: translateX(26px); /* Realiza uma transformação de translação no eixo X para mover o pseudo-elemento para a direita */
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px; /* Define um raio de borda de 34px para criar um slider com bordas arredondadas */
+}
+
+.slider.round:before {
+    border-radius: 50%; /* Define um raio de borda de 50% para criar um pseudo-elemento circular */
+}
+
+/*
+*Seleciona a tag article
+*/
+article {
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte dos elementos dentro da tag article*/
+    padding-top: 20px; /* Adiciona um espaçamento no topo do elemento article */
+}
+
+/*
+*Seleciona a classe article-shadow
+*/
+.article-shadow {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5); /*Cria uma espécie de 'sombra' no elemento com a classe article-shadow*/
+}
+
+/*
+*Seleciona as imagens da classe img-article
+*/
+.img-article {
+    width: 40%; /*Define a largura do elemento como 40%*/
+}
+
+/*
+*Seleciona o ÚNICO elemento com o id inicio
+*/
+#inicio {
+    background: linear-gradient(rgb(131, 212, 236), rgb(255, 255, 255)); /*Cria um sistema de transição de cores, que transita de cores através dos extremos da página*/
+    padding-bottom: 90px; /*Define um espaço entre o elemento e sua borda inferior*/
+    z-index: 99; /*Posiociona esse elemento na camada 99 de profundidade em relação à ordem de sobreposição dos elementos*/
+}
+
+/*
+*Seleciona todos as tags h1 dentro da classe inicio
+*/
+.inicio h1 {
+    text-align: center;     /*Alinha o texto de acordo com o centro de sua largura*/
+}
+
+/*
+*Seleciona todos os parágrafos dentro da tag com o id inicio
+*/
+#inicio p {
+    text-align:center;     /*Centraliza o texto*/
+}
+
+/*
+*Seleciona a imagem de classe floresta
+*/
+.floresta {
+    position: absolute; /*Indica que o elemento ficará em uma posição fixa em relação à página*/
+    width: 100%; /*Define a largura do elemento como 100%*/
+    height: 50%; /*Define o tamanho vertical ocupado pela imagem de class floresta como 50%*/
+    left: 0;     /*Define a posição horizontal do elemento em relação a sua borda esquerda*/
+    bottom: 0;    /*Define a posição vertical do elemento em relação a sua borda inferior*/
+    z-index: -1; /*Posiociona esse elemento na camada -1 de profundidade em relação à ordem de sobreposição dos elementos*/
+}
+
+/*
+*Seleciona a imagem de classe colinas
+*/
+.colinas {
+    position: absolute; /*Indica que o elemento ficará em uma posição fixa em relação à página*/
+    width: 100%;  /*Define a largura do elemento como 100%*/
+    height: 100%; /*Define o tamanho vertical ocupado pela imagem de class colinas como 50%*/
+    left: 0;      /*Define a posição horizontal do elemento em relação a sua borda esquerda*/
+    bottom: 0;    /*Define a posição vertical do elemento em relação a sua borda inferior*/
+    z-index: -1;  /*Posiociona esse elemento na camada -1 de profundidade em relação à ordem de sobreposição dos elementos*/
+}
+
+/*
+*Seleciona o elemento com o respectivo ids
+*/
+#downloads {
+    background-color: #92bd1e; /*Define a cor de fundo como um tom específico de verde*/
+    z-index: 99; /*Posiociona esse elemento na camada 99 de profundidade em relação à ordem de sobreposição dos elementos*/
+}
+
+/*
+*Seleciona os ÚNICOS elementos com os respectivos ids
+*/
+#epagri,
+#fepese,
+#pmi {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    /*Define a fonte dos elementos dentro dos ids selecionados*/
+}
+
+/*
+*Seleciona o elemento com o respectivo ids
+*/
+#fepese {
+    background-color: #92bd1e; /*Define a cor de fundo como um tom específico de verde*/
+}
+
+/*
+*Seleciona as tags h1 dentro das tags com os respectivos ids
+*/
+#pmi h1,
+#epagri h1 {
+    text-align: end;  /*Coloca o texto no final da sua largura total*/
+    color: #89a832; /*Define a cor das tags h1 dentro dos respectivos ids como um tom de verde*/
+}
+
+/*
+*Seleciona as tags p dentro das tags com os respectivos ids
+*/
+#pmi p,
+#epagri p {
+    text-align: end; /*Coloca o texto no final da sua largura total*/
+}
+
+/*
+*Seleciona as tags b dentro das tags com os respectivos ids
+*/
+#epagri b, 
+#pmi b {
+    color: #92bd1e;   /*Define a cor das tags b dentro dos respectivos ids como um tom de verde*/
+}
+
+/*
+*Seleciona as tags span dentro das tags com os respectivos ids
+*/
+#epagri span, 
+#pmi span {
+    color: #89a832;   /*Define a cor das tags span dentro dos respectivos ids como um tom de verde*/
+}
+
+/*
+*Seleciona as tags a dentro das tags com os respectivos ids
+*/
+#epagri a{ 
+    color: #92bd1e;   /*Define a cor das tags a dentro do respectivo ids como um tom de verde*/
+}
+
+/*
+*Seleciona todos os elementos com a classe title
+*/
+.title {
+    font-size: 32px;    /*Define o tamanho da fonte*/
+    cursor: default;    /*Define o cursor como o padrão ao passar o mouse por cima*/
+    user-select: none;  /*Impede a seleção do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a seguinte classe
+*/
+.article-small-width {
+    width: 50%;     /*Define a largura do elemento como 50%*/
+}
+
+/*
+*Seleciona todos os elementos com a seguinte classe
+*/
+.article-medium-width {
+    width: 70%;     /*Define a largura do elemento como 70%*/
+}
+
+/*
+*Seleciona todos os elementos com a seguinte classe
+*/
+.article-big-width {
+    width: 90%;     /*Define a largura do elemento como 90%*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn
+*/
+.btn {
+    transition: 300ms;           /*Define um tempo de transição de atributos*/
+    border: 2px solid #101010; /*Cria uma borda no elemento*/
+    padding: 15px 20px;          /*Cria um espaçamento interno dentro do elemento*/
+    border-radius: 15px;         /*Arredonda a borda do elemento*/
+    cursor: pointer;             /*Muda o tipo de cursor para o tipo 'pointer', de clique (a mãozinha)*/
+    font-weight: bold;           /*Define a espessura da fonte para bold, negrito*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-black
+*/
+.btn-black {
+    border-color: #193f11;      /*Define a cor da borda*/
+    background-color: #193f11;  /*Define a cor do plano de fundo*/
+    color: white;               /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-black após o mouse passar por cima
+*/
+.btn-black:hover {
+    border-color:black;                /*Define a cor da borda*/
+    background-color:rgba(0,0,0,0);    /*Define a cor do plano de fundo*/
+    color: black;                      /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-none-black
+*/
+.btn-none-black {
+    border-width: 0;           /*Define o tamanho da borda*/
+    color:black;             /*Define a cor do texto*/
+    padding: 0;                /*Cria um espaçamento interno dentro do elemento*/
+    margin: 0;                 /*Define uma margem 0*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-outline-black
+*/
+.btn-outline-black {
+    border-color: #193f11;      /*Define a cor da borda*/
+    background-color: rgba(0,0,0,0);    /*Define a cor do plano de fundo*/
+    color: #193f11;             /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-outline-black após o mouse passar por cima
+*/
+.btn-outline-black:hover {
+    background-color: #193f11;    /*Define a cor do plano de fundo*/
+    color: white;                 /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-white
+*/
+.btn-white {
+    border-color: white;        /*Define a cor da borda*/
+    background-color: white;    /*Define a cor do plano de fundo*/
+    color: #193f11;             /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-black após o mouse passar por cima
+*/
+.btn-white:hover {
+    border-color: #193f11;        /*Define a cor da borda*/
+    background-color: #193f11;    /*Define a cor do plano de fundo*/
+    color: white;                 /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-none-white
+*/
+.btn-none-white {
+    border-color:#193f11;        /*Define a cor da borda*/
+    background-color:#193f11;    /*Define a cor do plano de fundo*/
+    color: white;                 /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-none-white ao passar o mouse por cima
+*/
+.btn-none-white:hover {
+    border-color: white;        /*Define a cor da borda*/
+    background-color: white;    /*Define a cor do plano de fundo*/
+    color: #193f11;             /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe font
+*/
+.font {
+    color: rgb(150, 150,150);   /*Define a cor do texto*/
+    filter: invert(1);            /*Filtra a cor da fonte para o inverso em relação à sua cor*/
+}
+
+/*
+*Seleciona todos os elementos com a classe link
+*/
+.link {
+    font-weight: 700;            /*Define a espessura da fonte para 700 (negrito)*/
+}
+
+/*
+*Seleciona todos os elementos com a classe link após o mouse ser passado por cima
+*/
+.link:hover {
+    transition: 500ms;      /*Define um tempo de transição de atributos*/
+}
+
+/*
+*Seleciona todos os elementos com a classe link-black
+*/
+.link-black {
+    color: rgb(0, 0, 0, 0.5);    /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe link-black ao mouse/cursor passar por cima
+*/
+.link-black:hover {
+    color: #101010;             /*Define a cor do texto*/
+	filter: brightness(0.75)       /*Filtra o elemento para que seu brilho de cor se torne 0, se tornando mais escuro*/
+}
+
+/*
+*Seleciona todos os elementos com a classe link-white
+*/
+.link-white {
+    color: rgb(255, 255, 255, 0.75);    /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe link-white ao cursor passar por cima
+*/
+.link-white:hover {
+    color: white;    /*Define a cor do texto*/
+}
+
+/*
+*Seleciona o ÚNICO elemento com o id svg-white
+*/
+#svg-white {
+    filter: brightness(0.75)    /*Filtra o elemento para que seu brilho seja apenas 75% do que é. Quanto menor, mais escuro*/
+}
+
+/*
+*Seleciona o ÚNICO elemento com o id svg-white dentro da classe link-black após o mouse ser passado por cima de link-black
+*/
+.link-black:hover #svg-white {
+    transition: 300ms;          /*Define um tempo de transição entre os atributos mudados*/
+    filter: brightness(0.5)       /*Filtra o elemento para que seu brilho de cor se torne 0.5, se tornando mais escuro*/
+}
+
+/*
+*Seleciona o ÚNICO elemento com o id svg-black
+*/
+#svg-black {
+    opacity: 0.75;
+    filter: brightness(0) invert(1)         /*Filtra o elemento para que seu brilho de cor se torne 0, se tornando mais escuro*/
+                                            /*Filtra também a inversão do elemento em relação à sua cor para 70%*/
+}
+
+/*
+*Seleciona o ÚNICO elemento com o id svg-black dentro da classe link-white após o mouse ser passado por cima de link-white
+*/
+.link-white:hover #svg-black {
+    transition: 300ms;              /*Define um tempo de transição entre os atributos mudados*/
+    opacity: 1;                     /*Define o quão transparente é o elemento*/
+    filter: brightness(0) invert(1) /*Filtra o elemento para que seu brilho de cor se torne 0, se tornando mais escuro*/
+                                    /*Filtra também a inversão do elemento em relação à sua cor para 70%*/
+}
+
+/*
+*Seleciona a tag footer, age como uma div, é usada semanticamente para fazer o rodapé da página
+*/
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  /*Muda a fonte*/
+    background: linear-gradient(to bottom, #92bd1e, #92bd1e);   /*Define um gradiente como background*/
+    border-width: 1px 0 0 0;      /*Cria uma borda superior*/
+    border-style: solid;          /*O estilo da borda se torna sólido*/
+    border-color: #92bd1e;      /*A cor da borda se torna preta*/
+    padding: 20px;                /*O espaçamento interno do footer aumenta em 20px*/
+}
+
+
+/*
+*Seleciona o ÚNICO elemento com o id footer-field
+*/
+#footer-field {
+    border-style: solid;                        /*O estilo da borda se torna sólido*/ 
+    border-color: rgba(255, 255, 255, 0.2);   /*A cor da borda se torna preta*/
+    border-width: 0 0 1px 0;                    /*Cria uma borda inferior*/
+}
+/*
+*Seleciona o ÚNICO elemento com o id footer
+*/
+#footer {
+    background-color: #693594; /*Define a cor do fundo*/
+}
+
+/*
+*Seleciona a logotipo do site
+*/
+#logo {
+    margin-left: 20px;  /*Adiciona uma margem à esquerda do elemento*/
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link-dark {
+    border: 1px solid rgba(255, 255, 255, 0);   /*Cria uma borda de 1 pixel, 'sólida' da cor preta, porém completamente transparente para não haver erro na transição*/
+    background-color: rgba(255, 255, 255, 0);   /*Define a cor da borda*/
+    border-radius: 20px;             /*'Arredonda' as bordas do elemento em 5px*/
+    padding: 5px 10px;               /*Cria um 'espaçamento interno' de 5 pixels para todas as direções*/
+    color: rgba(255, 255, 255, 0.8);           /*Define a cor dos textos como cinza*/
+}
+
+/*
+*Seleciona todos os elementos com a classe
+*/
+.nav-link-dark:hover {
+    transition: 200ms;                        /*Cria uma transição dentro do tempo definido para os elementos abaixo*/
+    border: 1px solid rgba(0, 0, 0, 0.25);   /*Define a borda de 1 pixel já criada acima, porém agora ela ficará levemente visível*/
+    background-color: rgba(0, 0, 0, 0.25);   /*Define o background já criado acima, porém agora levemente visível*/
+}
+
+
+/*
+*Seleciona todos os elementos com a classe btn-black
+*/
+.btn-black-dark {
+    border-color: #441F7F;      /*Define a cor da borda*/
+    background-color: #441F7F;  /*Define a cor do plano de fundo*/
+    color: white;               /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-black após o mouse passar por cima
+*/
+.btn-black-dark:hover {
+    border-color:white;                /*Define a cor da borda*/
+    background-color:rgba(0,0,0,0);    /*Define a cor do plano de fundo*/
+    color: white;                      /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-none-black
+*/
+.btn-none-black-dark {
+    border-width: 0;           /*Define o tamanho da borda*/
+    color:black;             /*Define a cor do texto*/
+    padding: 0;                /*Cria um espaçamento interno dentro do elemento*/
+    margin: 0;                 /*Define uma margem 0*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-outline-black
+*/
+.btn-outline-black-dark {
+    border-color: #441F7F;      /*Define a cor da borda*/
+    background-color: rgba(0,0,0,0);    /*Define a cor do plano de fundo*/
+    color: #441F7F;             /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-outline-black após o mouse passar por cima
+*/
+.btn-outline-black-dark:hover {
+    background-color: #441F7F;    /*Define a cor do plano de fundo*/
+    color: white;                 /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-white
+*/
+.btn-white-dark {
+    border-color: white;        /*Define a cor da borda*/
+    background-color: white;    /*Define a cor do plano de fundo*/
+    color: #441F7F;             /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-black após o mouse passar por cima
+*/
+.btn-white-dark:hover {
+    border-color: #2b1055;        /*Define a cor da borda*/
+    background-color: #2b1055;    /*Define a cor do plano de fundo*/
+    color: white;                 /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-none-white
+*/
+.btn-none-white-dark {
+    border-color:#2b1055;        /*Define a cor da borda*/
+    background-color:#2b1055;    /*Define a cor do plano de fundo*/
+    color: white;                 /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os elementos com a classe btn-none-white ao passar o mouse por cima
+*/
+.btn-none-white-dark:hover {
+    border-color: white;        /*Define a cor da borda*/
+    background-color: white;    /*Define a cor do plano de fundo*/
+    color: #2b1055;             /*Define a cor do texto*/
+}
+
+/*
+*Seleciona todos os divs dentro da respectiva classe
+*/
+.credits div {
+    margin-top: 20px; /*Cria um espaçamento externo superior*/
+}
+
+#inicio {
+    padding-top: 40px; /*Cria um espaçamento interno superior*/
+}
