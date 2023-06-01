@@ -1,0 +1,147 @@
+<!--Inicia a TAG DOCTYPE, que avisa ao navegador a versão do HTML usada-->
+<!DOCTYPE html>
+<!--Inicia o documento HTML-->
+<html lang="pt-br">
+<!--Informa metadados ao navegador-->
+<head>
+    <!--tag meta de charset que informa ao navegador a tabela de caracteres a ser usada-->
+    <meta charset="UTF-8">
+    <!--Tag meta de http-equiv utilizada para dar suporte a aplicações que só funcionam nas versões mais antigas do IE (Internet Explorer)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Tag meta de viewport para controlar a proporção da página nos mais diversos dispositivos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Tag title para informar um título para a página, aparecerá na aba-->
+    <title>PROPAGRI - Instruções</title>
+    <!--Tags de link para importar folhas de estilo-->
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/utilities.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/instrucoes.css">
+</head>
+
+<!--Literalmente o corpo da página, tudo que estiver dentro da tag body irá aparecer na página-->
+<body>
+    <!--Tag header para cabeçalho/navegação/logotipo-->
+    <header class="d-flex-space-between" id="header">
+        <!--Tag a para a inserção de um hyperlink-->
+        <a href="../index.html"><img id="logo" src="../img/logo_propagri.png" style="height: 40px" ></a>
+        <!--Tag para criar lista não ordenada (unordered list)-->
+        <ul>
+            <!--Tags li para criar um item na lista seguida de uma tag a para inserir
+                um hyperlink de redirecionamento dentro da mesma página-->
+			<!--Botão para ativar e desativar o modo escuro-->
+            <li id="dark-mode" class="dark-mode" onclick="dark_mode()">
+				<!--label para a estilização do botão-->
+                <label class="switch">
+					<!--Checkbox que irá funcionar visualmente para o botão de ligado e desligado-->
+                    <input type="checkbox" id="checkin" notchecked>
+					<!--Span para conter a imagem do modo escuro-->
+                    <span class="slider round"></span>
+                </label>
+			</li>
+            <!--Redirecionará para inicio-->
+            <li><a href="../index.html#inicio" class="nav-link">Início</a></li>
+            <!--Redirecionará para a área de downloads-->
+            <li><a href="../index.html#downloads" class="nav-link">Downloads</a></li>
+            <!--Redirecionará para os créditos EPAGRI-->
+            <li><a href="../index.html#epagri" class="nav-link">EPAGRI</a></li>
+            <!--Redirecionará para os créditos FEPESE-->
+            <li><a href="../index.html#fepese" class="nav-link">FEPESE</a></li>
+            <!--Redirecionará para as informações sobre a PMI-->
+            <li><a href="../index.html#pmi" class="nav-link">Sobre</a></li>
+            <!--Redirecionará para os créditos-->
+            <li><a href="../credits.html" class="nav-link">Créditos</a></li>
+        </ul>
+    </header>
+
+    <!--Tag article utilizada semânticamente para conter o conteúdo principal ou as informações da página-->
+    <article class="d-flex-center flex-column">
+		<!--Tag section para servir de container para as instruções-->
+        <section id="instruction-window" class="w-90">
+				<!--Tag section para servir de container para a primeira parte das informações-->
+                <section class="mb-50">
+				<!--Tag h2 para criar um título-->
+                <h2 class="mb-5">Instruções e Informações do Simulado</h2>
+					<!--Tag ol para criar uma lista ordenada para enumerar as instruções-->
+                    <ol class="instruction-list">
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">A prova é constituída de 50 questões alternativas que fazem parte deste simulado</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">são apresentadas 5 alternativas diferentes de respostas, sendo A até E, no qual apenas uma delas é a correta</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">A redação que faz parte da prova não foi inclusa neste simulado. Para cada questão</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li">O tempo é livre, e ao final do simulado, você poderá observar o total de questões que você acertou e errou.</li>
+                    </ol>
+                </section>
+				<!--Tag section para servir de container para a primeira parte das informações-->
+                <section class="mb-50">
+				<!--Tag h2 para criar um título-->
+                <h2 class="mb-5">Instruções e Informações do Site</h2>
+					<!--Tag ol para criar uma lista ordenada para enumerar as instruções-->
+                    <ol class="instruction-list">
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">O botão de modo escuro não ficará disponível enquanto estiver fazendo o simulado, ative-o com antecedência se necessário</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Se você desejar voltar à página inicial enquanto faz o simulado, basta clicar na logotipo que fica no canto superior esquerdo da tela</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Ao iniciar o simulado, a questão atual aparecerá na parte superior da tela</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Abaixo da questão atual, aparecerá o tema da questão</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Abaixo do tema da questão, haverá uma barra de navegação na qual você pode navegar livremente entre as questões</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">O enunciado da questão aparecerá logo a seguir, assim como suas alternativas</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Após clicar em uma alternativa, será necessário clicar no botão "Corrigir" para que a resposta seja analisada e armazenada</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Após o sistema corrigir a questão, será apresentado ao usuário um pop-up dizendo se ele acertou ou errou</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Não é possível mudar a resposta da questão após corrigi-la, então escolha com cuidado</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">É possível ver as estatísticas de acertos e erros da questão clicando no botão "Estatísticas", porém ele aparecerá apenas após a correção da questão</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li border-bottom">Após a correção, basta clicar no botão "Prosseguir" que aparecerá no lugar do botão de correção</li>
+						<!--Tag li para criar um item na lista ordenada, usada para inserir as instruções separadamente-->
+                        <li class="instruction-li">Você poderá finalizar o simulado a qualquer hora clicando no botão "Finalizar", direcionando-o à página de resultados, onde você poderá verificar seu desempenho!</li>
+                    </ol>
+                </section>
+				<!--Tag section para servir de container para os botões de iniciar Simulado e Prova e Gabarito-->
+                <section>
+					<!--Tag p para parágrafo-->
+                    <p class="mb-20">Dito isso, que tal iniciar o simulado?</p>
+                    <!--Tag div para conter os links de redirecionamento-->
+                    <div class="d-flex-center mb-25">
+                    <!--Tag a para conter um hyperlink que irá iniciar instantaneamente o simulado-->
+                    <a href="./Q1_Ad.html" class="btn btn-black me-20" id="btn-sim">Iniciar simulado</a>
+                    <!--Tag a para conter um hyperlink que irá redirecionar o usuário para a área de downloads-->
+                    <a href="../index.html#downloads" class="btn btn-outline-black" id="btn-gab-in">Prova e Gabarito</a>
+                </div>
+                </section>
+        </section>
+    </article>
+
+    <!--Tag footer para criar o rodapé da página-->
+    <footer  class="d-flex-center flex-column article-shadow c-white" id="footer-spc">
+        <!--Tag div para conter as informações do rodapé, como logotipo e a descrição do site-->
+        <div class="d-flex-space-between mb-20 pb-20 w-100" id="footer-field">
+            <!--Tag div para conter as logotipos de crédito-->
+            <div id="footer-credit" class="w-center">
+                <!--Tag a para redirecionamento à pagina da FATEC Carapicuíba seguida de uma tag img para inserir sua logotipo-->
+                <a href="http://www.fateccarapicuiba.edu.br/"><img src="../img/logo_fatec.png" height="60px"></a>
+                <!--Tag a para redirecionamento à pagina da FATEC Carapicuíba de Análise e Desenvolvimento de Sistemas
+                    e uma tag img para inserir sua logotipo-->
+                <a href="http://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"><img src="../img/logo_ads.png" height="60px"></a>
+                <!--Tag a para redirecionamento à pagina do Centro Paula Souza seguida de uma tag img para inserir sua logotipo-->
+                <a href="https://www.cps.sp.gov.br/"><img src="../img/logo_cps.png" height="60px"></a>
+            </div>
+        </div>
+
+        <!--Declaração de direitos de site-->
+        <p>© Direitos do website reservados.</p>
+    </footer>
+
+    <!--Tag script para inserir ou importar scripts-->
+    <script src="../script/instrucoes.js"></script>
+</body>
+</html>

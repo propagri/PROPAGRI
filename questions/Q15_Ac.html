@@ -1,0 +1,138 @@
+<!--Inicia a TAG DOCTYPE, que avisa ao navegador a versão do HTML usada-->
+<!DOCTYPE html>
+<!--Inicia o documento HTML-->
+<html>
+    <!--Informa metadados ao navegador-->
+    <head>
+        <!--Informa ao navegador a tabela de caracteres a ser usada-->
+        <meta charset="UTF-8">
+        <!--Define um título para a página, visível na aba-->
+        <title>Questão 15</title>
+        <!--Tag viewport para controlar a proporção da página nos mais diversos dispositivos-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Informa ao browser a folha de estilo utilizada-->
+        <link rel="stylesheet" href="../style/reset.css">
+        <link rel="stylesheet" href="../style/questions.css"> 
+        <script src="../dist/plotly/plotly.min.js" charset="utf-8"></script>
+    </head>
+
+    <!--Literalmente o corpo da página, tudo que estiver dentro da tag body irá aparecer na página-->
+    <body> 
+        <a href="../index.html" id="logo"><img src="../img/logo_propagri.png" height="50px"></a>
+        <!--Tag header para cabeçalho/navegação/logotipo-->
+        <header>
+             <!--Tag de parágrafo para inserir em qual questão o usuário está-->
+            <p id="quest-num">Questão 15/50</p>
+            <!--Tag small para diminuir o tamanho da letra, mas nesse caso é apenas para semântica
+                para informar a categoria da questão-->
+            <small id="category">Raciocínio Lógico e Matemático</small>
+            <!--Tag para criar lista não ordenada (unordered list)-->
+            <ul id="navigator">
+                <!--Tag a para criar um link (que aponta para a primeira questão do simulado) seguida de um li para ser considerado um item da lista (list item)-->
+                <a href="./Q1_Ad.html"><li>&lt&lt</li></a>
+                <!--Tag a para criar um link (que aponta para a questão anterior do simulado) seguida de um li para ser considerado um item da lista (list item)-->
+                <a href="./Q14_Ac.html"><li>&lt</li></a>
+                <!--Tag a para criar um link (que aponta para a questão 1) seguida de um li para ser considerado um item da lista (list item)-->
+                <a class="ret" href="./Q14_Ac.html"><li>14</li></a>
+                <!--Tag a para criar um link (que aponta para a questão 2) seguida de um li para ser considerado um item da lista (list item)-->
+                <a class="ret" href="#" id="active"><li>15</li></a>
+                <!--Tag a para criar um link (que aponta para a questão 3) seguida de um li para ser considerado um item da lista (list item)-->
+                <a class="ret" href="./Q16_Aa.html"><li>16</li></a>
+                <!--Tag a para criar um link (que aponta para a próxima questão do simulado) seguida de um li para ser considerado um item da lista (list item)-->
+                <a href="./Q16_Aa.html"><li>&gt</li></a>
+                <!--Tag a para criar um link (que aponta para a última questão do simulado) seguida de um li para ser considerado um item da lista (list item)-->
+                <a href="./Q50_Ac.html"><li>&gt&gt</li></a>
+            </ul>
+        </header>
+    
+        <!--Tag article utilizada semânticamente para conter o conteúdo principal ou as informações da página-->
+        <article>
+            <!--Tag section semântica para conter uma certa quantidade de informações da página-->
+            <section class="question">
+                <!--Tag p para parágrafo e b para negrito-->
+                <p><b>15.</b>Em uma escola, 20% dos alunos sabem inglês.<br>
+                    Se 3 entre cada 8 alunos que não sabem inglês aprenderem inglês, a escola terá 610 alunos que sabem inglês.<br>
+                    Portanto, o número total de alunos nesta escola é:</p>
+            </section>
+            <!--Tag div para criar um container para conter as alternativas-->
+            <div>
+                <!--Tag ul para criar uma lista não ordenada para inserir as alternativas em lista-->
+                <ul id="question">
+                    <!--List Item seguido de um botão para conter a alternativa, span para conter a letra da alternativa A e outro span para conter a resposta da A-->
+                    <li><button onclick="page.selectQuestion('A')" name="Q15_Aa" class="alternative pending"><span class="letter">A</span><span>Menor que 1150.</span></button></li>
+                    <!--List Item seguido de um botão para conter a alternativa, span para conter a letra da alternativa B e outro span para conter a resposta da B-->
+                    <li><button onclick="page.selectQuestion('B')" name="Q15_Ab" class="alternative pending"><span class="letter">B</span><span>Maior que 1150 e menor que 1200.</span></button></li>
+                    <!--List Item seguido de um botão para conter a alternativa, span para conter a letra da alternativa C e outro span para conter a resposta da C-->
+                    <li><button onclick="page.selectQuestion('C')" name="Q15_Ac" class="alternative pending" id="correta"><span class="letter">C</span><span>Maior que 1200 e menor que 1250.</span></button></li>
+                    <!--List Item seguido de um botão para conter a alternativa, span para conter a letra da alternativa D e outro span para conter a resposta da D-->
+                    <li><button onclick="page.selectQuestion('D')" name="Q15_Ad" class="alternative pending"><span class="letter">D</span><span>Maior que 1250 e menor que 1300.</span></button></li>
+                    <!--List Item seguido de um botão para conter a alternativa, span para conter a letra da alternativa E e outro span para conter a resposta da E-->
+                    <li><button onclick="page.selectQuestion('E')" name="Q15_Ae" class="alternative pending"><span class="letter">E</span><span>Maior que 1300</span></button></li>
+                </ul>
+            </div>
+
+            <!--Um parágrafo simples, seguido de um small para deixar o character pequeno para indexar um hyperlink da fonte do PDF da questão-->
+            <p id="source"><small>Fonte: <a href="https://2022epagri.fepese.org.br/?go=download&path=2&inline=1&arquivo=S201.pdf#page=3">https://2022epagri.fepese.org.br/</a></small></p>
+            <!--tag p vazio, mas será atualizado dinamicamente via javascript quando a questão estiver respondida-->
+            <p id="definitive" class="btn hide">Text</p>
+            <!--tag section para conter as informações dos botões e do estado da questão-->
+            <section id="buttons">
+                <!--tag button usado para finalizar o simulado-->
+                <button class="btn btn-finish" onclick="finish()">Finalizar</button>
+                <!--tag button usado para mostrar estatísticas-->
+                <button class="btn bg-black-static hide" onclick="page.statistics()">Estatísticas</button>
+                <!--tag button para corrigir a questão, após isso ela se torna o "prosseguir", usado para passar para a próxima questão-->
+                <button class="btn disabled" onclick="page.answer()">Corrigir</button>
+            </section>
+        </article>
+    
+        <footer>
+    
+        </footer>
+
+        <!--Tag div para conter uma tela de fundo escura e seu pop-upque aparecerá quando o usuário responder
+            à questão pela primeira vez-->
+        <div id="popup-window" class="hide">
+            <!--Tag div para conter o pop up-->
+            <div id="popup-screen">
+                <!--Tag de titulo/cabeçalho h2 vazia que irá inserir dinamicamente (js) um texto dependendo da resposta-->
+                <h2 id="answer-title"></h2>
+                <!--Tag div para conter o texto da resposta e a letra correta-->
+                <div id="answer-content">
+                    <!--Tag de titulo/cabeçalho h4 que irá conter a letra correta da questão-->
+                    <h4 id="answer-letter"></h4>
+                    <!--Tag p de parágrafo e i de itálico que irá conter o texto da resposta da letra correta-->
+                    <p><i>"<span id="answer-text"></span>"</i></p>
+                </div>
+                <!--tag button que irá ocultar o pop-up, img que irá mostrar um X para o usuário clicar-->
+                <button onclick="page.closePopUp()"><img src="../svg/close.png"></button>
+            </div>
+        </div>
+                        <!--Tag div para conter uma tela de fundo escura e seu pop-up que aparecerá quando o usuário clicar
+           em estatísticas-->
+        <div id="statistic-window" class="hide">
+            <!--Tag div para conter o pop up-->
+            <div id="statistic-screen">
+                <!--Tag de titulo/cabeçalho h2-->
+                <h2 id="statistic-title">Estatísticas</h2>
+                <!--Tag div o gráfico das estatísticas e suas informações-->
+                <div id="statistic-content">
+                    <!--Tag p para parágrafo sobre informações das estatísticas-->
+                    <p>A seguir, serão apresentadas estatísticas que foram geradas de forma fictícia, ou seja, não correspondem a dados reais.</p>
+                    <div id="statistic-graphic">
+                        
+                    </div>
+                    <!--Tag p de parágrafo e i de itálico que irá conter a fonte do gráfico-->
+                    <p><i><span id="statistic-text">Fonte: autores</span></i></p>
+                </div>
+                <!--tag button que irá ocultar o pop-up, img que irá mostrar um X para o usuário clicar-->
+                <button onclick="page.closeStatisticPopUp()"><img src="../svg/close.png"></button>
+            </div>
+        </div>        <!--Tags de script para importar ou inserir um script,
+            importante estar após o código para que os elementos que serão alterados
+            se tornem existentes antes de serem executados via script,
+            caso contrário ocasionará em erro-->
+        <script src="../script/data.js"></script>
+        <script src="../script/answer.js"></script>
+    </body>
+</html>
